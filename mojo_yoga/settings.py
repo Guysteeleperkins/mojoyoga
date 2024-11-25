@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-9ay+ab(@)9q(t%#2^(3lh9*us!*^ky4-1-pom=hnddqx@)z(3*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['8000-guysteeleperki-mojoyoga-xi80la2fw4x.ws.codeinstitute-ide.net', 'mojoyoga-f4267f7b0b57.herokuapp.com']
 

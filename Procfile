@@ -1,1 +1,1 @@
-mojo_yoga.wsgi
+web: gunicorn mojo_yoga.wsgi

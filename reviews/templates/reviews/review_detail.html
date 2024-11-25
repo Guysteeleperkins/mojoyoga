@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<body>
+    <div class="container text-center justify-content">
+        <div class="card" style="width: 40rem;">
+            <h1 class="card-title">{{ review.author }}'s Review</h1>
+            <!-- Display the image if it exists -->
+            {% if review.image %}
+            <img src="{{ review.image.url }}" alt="Review image" style="max-width: 500px; height: auto;">
+            {% endif %}
+            <div class="card-body">
+                <p class="card-text">{{ review.content }}</p>
+                <p>{{ review.rating }} Stars</p>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock content %}

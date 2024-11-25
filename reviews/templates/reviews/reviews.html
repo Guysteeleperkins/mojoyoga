@@ -15,11 +15,11 @@
           <h5 class="card-title">{{ review.author }}</h5>
           <p class="card-text">{{ review.content }}</p>
           <p>{{ review.rating }} Stars</p>
-          <a href="#" class="btn btn-primary">See Review</a>
+          <a href="{% url 'review_detail' review.pk %}" class="btn btn-primary">See Review</a>
         </div>
         {% endfor %}
     </div>
         
 </body>
 
-{% endblock %}
+{% endblock content %}

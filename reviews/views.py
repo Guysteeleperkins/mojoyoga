@@ -54,7 +54,7 @@ def review_edit(request, pk):
         if form.is_valid():
             form.save()
             messages.success(request, "Review updated!")
-            return redirect('reviews')
+            return redirect('reviews/')
         else:
             messages.error(request, "Error updating review!")
     else:

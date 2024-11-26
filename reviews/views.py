@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic
 from django.contrib import messages
 from django.urls import reverse_lazy
@@ -54,7 +54,7 @@ def review_edit(request, pk):
         if form.is_valid():
             form.save()
             messages.success(request, "Review updated!")
-            return redirect('reviews/')
+            return redirect('reviews')
         else:
             messages.error(request, "Error updating review!")
     else:

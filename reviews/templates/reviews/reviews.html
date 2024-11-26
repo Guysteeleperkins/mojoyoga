@@ -12,10 +12,13 @@
         <img src="{{ review.image.url }}" alt="Review image" style="max-width: 300px; height: auto;">
         {% endif %}
         <div class="card-body">
-          <h5 class="card-title">{{ review.get_author_name }}</h5>
+          <h5 class="card-title">{{ review.author }}</h5>
           <p class="card-text">{{ review.content }}</p>
           <p>{{ review.rating }} Stars</p>
           <a href="{% url 'review_detail' review.pk %}" class="btn btn-primary">See Review</a>
+          {% if user.is_authenticated and review.author == user %}
+          <a href="{% url 'review_edit' review.pk %}" class="btn btn-primary">Edit/Delete Review</a>
+          {% endif %}
         </div>
         {% endfor %}
     </div>

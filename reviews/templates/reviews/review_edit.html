@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<h1>Edit review</h1>
+
+{% if user.is_authenticated %}
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div>
+            {{ form.rating }}
+        </div>
+        <br>
+        <div>
+            {{ form.content }}<br>
+        </div>
+        <br>
+        <div>
+            {% if form.instance.image %}
+                <div>
+                    <p>Current Image:</p>
+                    <img src="{{ form.instance.image.url }}" alt="Current Review Image" style="max-width: 200px; max-height: 200px;">
+                </div>
+                <div>
+                    <label for="{{ form.image.id_for_label }}">Replace image:</label>
+                    {{ form.image }}
+                </div>
+            {% else %}
+                <p>No image uploaded yet.</p>
+                {{ form.image }}
+            {% endif %}
+        </div>
+        <br>
+        
+        <!-- <div>
+            {{ form.is_anonymous }} <label for="id_is_anonymous">Hide username</label><br>
+        </div> -->
+        <button type="submit" class="btn btn-primary">Save Changes</button>
+    </form>
+{% else %}
+    <p>You must be <a href="{% url 'leave_review' %}">logged in</a> to leave a review.</p>
+    <p>If you don't have an account, <a href="{% url 'account_signup' %}">sign up</a> to get started.</p>
+{% endif %}
+
+{% endblock content %}

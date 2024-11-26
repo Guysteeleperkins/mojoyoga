@@ -6,7 +6,7 @@
 <body>
     <div class="container text-center justify-content">
         <div class="card" style="width: 40rem;">
-            <h1 class="card-title">{{ review.author }}'s Review</h1>
+            <h1 class="card-title">{{ review.get_author_name }}</h1>
             <!-- Display the image if it exists -->
             {% if review.image %}
             <img src="{{ review.image.url }}" alt="Review image" style="max-width: 500px; height: auto;">

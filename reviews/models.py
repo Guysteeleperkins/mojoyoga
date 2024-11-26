@@ -7,7 +7,8 @@ class Review(models.Model):
     """
     null = True if users want to stay anonymous
     """
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="review_posts", null=True)
+    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="review_posts", null=True, blank=True)
+    is_anonymous = models.BooleanField(default=False)
     RATING_CHOICES = [(i, str(i)) for i in range(6)]
     rating = models.IntegerField(choices=RATING_CHOICES)
     content = models.TextField()
@@ -15,3 +16,9 @@ class Review(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
 
+    def get_author_name(self):
+        if self.is_anonymous or self.author is None:
+            return "Anonymous"
+        else:
+            return self.author.username
+    

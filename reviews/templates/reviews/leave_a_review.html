@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Leave a Review</h1>
+
+{% if user.is_authenticated %}
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.rating }}<br>
+        {{ form.content }}<br>
+        {{ form.image }}<br>
+        <div>
+            {{ form.is_anonymous }} <label for="id_is_anonymous">Hide username</label><br>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit Review</button>
+    </form>
+{% else %}
+    <p>You must be <a href="{% url 'leave_review' %}">logged in</a> to leave a review.</p>
+    <p>If you don't have an account, <a href="{% url 'account_signup' %}">sign up</a> to get started.</p>
+{% endif %}
+
+{% endblock content %}

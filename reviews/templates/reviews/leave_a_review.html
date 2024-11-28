@@ -1,12 +1,13 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block content %}
 
 <!-- leave_a_review.html content starts here -->
 
-<h1>Leave a Review</h1>
+<div class="leave-a-review">
+    <h1>Leave a Review</h1>
 
-{% if user.is_authenticated %}
+    {% if user.is_authenticated %}
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.rating }}<br>
@@ -17,9 +18,10 @@
         </div> -->
         <button type="submit" class="btn btn-primary">Submit Review</button>
     </form>
-{% else %}
+    {% else %}
     <p>You must be <a href="{% url 'leave_review' %}">logged in</a> to leave a review.</p>
     <p>If you don't have an account, <a href="{% url 'account_signup' %}">sign up</a> to get started.</p>
-{% endif %}
+    {% endif %}
+</div>
 
 {% endblock content %}

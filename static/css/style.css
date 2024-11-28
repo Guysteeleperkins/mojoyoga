@@ -122,6 +122,8 @@ footer p {
 
 .leave-a-review {
     margin-top: 130px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: black;
 }
 
 .star-rating i {
@@ -132,4 +134,15 @@ footer p {
 
 .star-rating i.far {
     color: #d3d3d3;
+}
+
+#id_content {
+    width: 80%;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+
+#id_rating {
+    border: 2px solid #ccc;
+    border-radius: 10px;
 }

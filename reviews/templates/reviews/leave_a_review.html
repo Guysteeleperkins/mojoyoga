@@ -4,24 +4,66 @@
 
 <!-- leave_a_review.html content starts here -->
 
-<div class="leave-a-review">
-    <h1>Leave a Review</h1>
+<div class="container-fluid hero">
+    <div class="row">
+        <div class="col-12 d-flex align-items-center justify-content-center">
+            <div class="leave-a-review col-md-6">
+                <h1 class="mb-4">Leave a Review</h1>
 
-    {% if user.is_authenticated %}
-    <form method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form.rating }}<br>
-        {{ form.content }}<br>
-        {{ form.image }}<br>
-        <!-- <div>
-            {{ form.is_anonymous }} <label for="id_is_anonymous">Hide username</label><br>
-        </div> -->
-        <button type="submit" class="btn btn-primary">Submit Review</button>
-    </form>
-    {% else %}
-    <p>You must be <a href="{% url 'leave_review' %}">logged in</a> to leave a review.</p>
-    <p>If you don't have an account, <a href="{% url 'account_signup' %}">sign up</a> to get started.</p>
-    {% endif %}
+                {% if user.is_authenticated %}
+                <form method="post" enctype="multipart/form-data" class="review-form">
+                    {% csrf_token %}
+                    <div class="row leave-rating">
+                        <div class="col-12">
+                            <p>
+                                How would you rate your experience?
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row lar-rating">
+                        <div class="col-12">
+                            {{ form.rating }}
+                        </div>
+                    </div>
+                    <div class="row lar-content">
+                        <div class="col-12">
+                            <p>
+                                Write your review
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row lar-content">
+                        <div class="col-10">
+                            {{ form.content }}
+                        </div>
+                    </div>
+                    <div class="row lar-image">
+                        <p>
+                            Upload an image
+                        </p>
+                        <p>
+                            (Optional)
+                        </p>
+                        <div class="col-6">
+                            {{ form.image }}
+                        </div>
+                    </div>
+                    <div class="row lar-submit">
+                        <div class="col-8">
+                            <button type="submit" class="btn btn-primary mt-3">Submit Review</button>
+                        </div>
+                    </div>
+                </form>
+                {% else %}
+                <p class="text-muted">You must be <a href="{% url 'leave_review' %}">logged in</a> to leave a review.
+                </p>
+                <p class="text-muted">If you don't have an account, <a href="{% url 'account_signup' %}">sign up</a> to
+                    get started.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
 </div>
+
 
 {% endblock content %}

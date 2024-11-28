@@ -12,7 +12,30 @@
     width: 100%;
     z-index: 1000;
     background-color: white;
-    opacity: 0.7;
+    transition: background-color 0.3s ease;
+    opacity: 0.5;
+}
+
+.navbar.scrolled {
+    background-color: white;
+    opacity: 1;
+}
+
+#navbarText {
+    margin-right: 10%;
+}
+
+footer {
+    background-color: rgba(0, 0, 128, 0.839);
+}
+
+footer p {
+    color: white;
+    font-size: 22px;
+}
+
+.made-by p {
+    font-size: 12px;
 }
 
 /* Welcome page  */
@@ -23,7 +46,7 @@
     background-image: url('../images/heroimage.jpg');
     background-repeat:  no-repeat;
     background-size: cover;
-    height: 500px;
+    height: 100vh;
     width: 100vw;
     margin: 0;
 }
@@ -31,12 +54,26 @@
 .hero-text h1 {
     color: white;
     text-transform: uppercase;
+    font-size: 70px;
+    font-family: "Funnel Display", sans-serif;
 }
 
 .hero-text p {
     color: white;
+    font-size: 25px;
 }
 
 .welcome-intro {
-    background-color: antiquewhite;
+    background-color: rgb(219, 219, 219);
+}
+
+.welcome-details h2 {
+    font-size: 50px;
+    font-family: Roboto, sans-serif;
+}
+
+.welcome-details p {
+    font-size: 22px;
+    font-family: Roboto, sans-serif;
+    color: rgb(80, 80, 80);
 }

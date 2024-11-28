@@ -1,28 +1,39 @@
 {% extends "base.html" %}
 {% load static %}
-
 {% block content %}
+<!-- reviews.html starts here -->
+<div class="reviews-page hero">
+  <h1>Reviews</h1>
+  <div class="container-fluid">
+    <div class="row">
 
-<body>
-    <h1>Reviews</h1>
-    <div class="card" style="width: 18rem;">
-        {% for review in object_list %}
-        <!-- Display the image if it exists -->
-        {% if review.image %}
-        <img src="{{ review.image.url }}" alt="Review image" style="max-width: 300px; height: auto;">
-        {% endif %}
-        <div class="card-body">
-          <h5 class="card-title">{{ review.author }}</h5>
-          <p class="card-text">{{ review.content }}</p>
-          <p>{{ review.rating }} Stars</p>
-          <a href="{% url 'review_detail' review.pk %}" class="btn btn-primary">See Review</a>
-          {% if user.is_authenticated and review.author == user %}
-          <a href="{% url 'review_edit' review.pk %}" class="btn btn-primary">Edit/Delete Review</a>
-          {% endif %}
+      <!-- Reviews Column -->
+      <div class="col-12 mt-3 left">
+        <div class="row">
+          {% for review in reviews_list %}
+          <div class="col-md-4">
+            <div class="review-image">
+              <!-- Display the image if it exists -->
+              {% if review.image %}
+              <img src="{{ review.image.url }}" alt="Review image" style="max-width: 18rem; height: auto;">
+              {% endif %}
+            </div>
+            <div class="card mb-4 review-cards" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title">{{ review.author }}</h5>
+                <p class="card-text">{{ review.content }}</p>
+                <p>{{ review.rating }} Stars</p>
+                <a href="{% url 'review_detail' review.pk %}" class="btn btn-primary">See Review</a>
+                {% if user.is_authenticated and review.author == user %}
+                <a href="{% url 'review_edit' review.pk %}" class="btn btn-primary">Edit/Delete Review</a>
+                {% endif %}
+              </div>
+              {% endfor %}
+            </div>
+          </div>
         </div>
-        {% endfor %}
+      </div>
     </div>
-        
-</body>
+  </div>
 
-{% endblock content %}
+  {% endblock content %}

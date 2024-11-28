@@ -10,6 +10,7 @@ from .forms import ReviewForm
 class ReviewList(generic.ListView):
     model = Review
     template_name = 'reviews/reviews.html'
+    context_object_name = 'reviews_list'
     paginate_by = 16
 
     def get_queryset(self):

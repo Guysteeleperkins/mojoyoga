@@ -45,7 +45,7 @@ def review_detail(request, pk):
 
 def review_edit(request, pk):
     """
-    view to edit reviews
+    view to edit review
     """
     review = get_object_or_404(Review, pk=pk)
 
@@ -61,5 +61,19 @@ def review_edit(request, pk):
         form = ReviewForm(instance=review)
 
     return render(request, 'reviews/review_edit.html', {'form': form, 'review':review,})
+
+def review_delete(request, pk):
+    """
+    view to delete review
+    """
+    review = get_object_or_404(Review, pk=pk)
+
+    if review.author == request.user:
+        review.delete()
+        messages.add_message(request, messages.SUCCESS, 'Review deleted!')
+    else:
+        messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
+
+    return redirect('reviews')
 
 

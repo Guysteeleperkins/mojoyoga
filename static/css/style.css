@@ -1,3 +1,42 @@
-h1 {
-    color: red;
+/* Base HTML */
+
+.logo img {
+    max-width: 40%;
+    max-height: 40%;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
+    opacity: 0.7;
+}
+
+/* Welcome page  */
+
+#hero {
+    position: relative;
+    background-position: center 50%;
+    background-image: url('../images/heroimage.jpg');
+    background-repeat:  no-repeat;
+    background-size: cover;
+    height: 500px;
+    width: 100vw;
+    margin: 0;
+}
+
+.hero-text h1 {
+    color: white;
+    text-transform: uppercase;
+}
+
+.hero-text p {
+    color: white;
+}
+
+.welcome-intro {
+    background-color: antiquewhite;
 }

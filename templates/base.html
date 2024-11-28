@@ -34,10 +34,12 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'welcome' %}"><span class="logo">
+            <a class="navbar-brand" href="{% url 'welcome' %}">
+                <span class="logo">
                     <!-- Add an image here for the logo -->
-                    MOJO YOGA
-                </span></a>
+                    <img src="../static/images/logo.jpg" alt="Mojo Logo">
+                </span>
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -51,6 +53,10 @@
                     <li class="nav-item"></li>
                     <a class="nav-link {% if request.path == 'reviews' %}active{% endif %}" aria-current="page"
                         href="{% url 'reviews' %}">Reviews</a>
+                    </li>
+                    <li class="nav-item"></li>
+                    <a class="nav-link {% if request.path == '/leave-a-review/' %}active{% endif %}" aria-current="page"
+                        href="{% url 'leave_review' %}">Leave a review</a>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
@@ -68,20 +74,16 @@
                     </li>
                     {% endif %}
                 </ul>
-                <span class="navbar-text text-muted">
-                    <a class="nav-link {% if request.path == '/leave-a-review/' %}active{% endif %}" aria-current="page"
-                            href="{% url 'leave_review' %}">Leave a review</a>
-                </span>
             </div>
+            {% if user.is_authenticated %}
+            <p class="text-end m-3">You are logged in as {{ user }}</p>
+            {% else %}
+            <p class="text-end m-3">You are not logged in</p>
+            {% endif %}
         </div>
     </nav>
 
     <main class="flex-shrink-0 main-bg">
-        {% if user.is_authenticated %}
-        <p class="text-end m-3">You are logged in as {{ user }}</p>
-        {% else %}
-        <p class="text-end m-3">You are not logged in</p>
-        {% endif %}
 
         {% block content %}
         <!-- Content Goes here -->
@@ -107,6 +109,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
     </script>
+
+    {% block extras %}
+    {% endblock %}
 </body>
 
 </html>

@@ -2,52 +2,69 @@
 {% load static %}
 {% block content %}
 <!-- reviews.html starts here -->
-<div class="hero">
-  <div class="reviews-header">
-    <h1>Reviews</h1>
-  </div>
-  <div class="container-fluid">
-    <div class="row">
-
-      <!-- Reviews Column -->
-      <div class="col-12 mt-3 left">
-        <div class="row">
-          {% for review in reviews_list %}
-          <div class="col-md-4">
-            <div class="review-image">
-              <!-- Display the image if it exists -->
-              {% if review.image %}
-              <img src="{{ review.image.url }}" alt="Review image">
-              {% else %}
-              <img src="{% static 'images/defaultimage.jpg' %}" alt="Mojo Logo">
-              {% endif %}
-            </div>
-            <div class="card mb-4 review-cards" style="width: 18rem;">
-              <div class="card-body">
-                <h5 class="card-title">{{ review.author }}</h5>
-                <p class="card-text">{{ review.content }}</p>
-                <p>
-                  <span class="star-rating" data-rating="{{ review.rating }}"></span>
-                </p>
-                <a href="{% url 'review_detail' review.pk %}" class="btn btn-primary">See Review</a>
-                {% if user.is_authenticated and review.author == user %}
-                <a href="{% url 'review_edit' review.pk %}" class="btn btn-primary">Edit/Delete Review</a>
+<body">
+  <div class="hero-review">
+    <div class="login-status position-absolute text-end">
+      {% if user.is_authenticated %}
+      <p class="text-end m-1">You are logged in as {{ user }}</p>
+      {% else %}
+      <p class="text-end m-1">You are not logged in</p>
+      {% endif %}
+    </div>
+    <div class="reviews-header">
+      <h1>Reviews</h1>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+  
+        <!-- Reviews Column -->
+        <div class="col-12 mt-3 left">
+          <div class="row">
+            {% for review in reviews_list %}
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3 d-flex flex-column align-items-center full-review">
+              <div class="review-image">
+                <!-- Display the image if it exists -->
+                {% if review.image %}
+                <img src="{{ review.image.url }}" alt="Review image">
+                {% else %}
+                <img src="{% static 'images/defaultimage.jpg' %}" alt="Mojo Logo">
                 {% endif %}
               </div>
+              <div class="card mb-1 review-cards" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">{{ review.author }}</h5>
+                  <p class="card-text">{{ review.content }}</p>
+                  <p>
+                    <span class="star-rating" data-rating="{{ review.rating }}"></span>
+                  </p>
+                  <a href="{% url 'review_detail' review.pk %}" class="btn btn-primary">See Review</a>
+                  {% if user.is_authenticated and review.author == user %}
+                  <a href="{% url 'review_edit' review.pk %}" class="btn btn-primary">Edit/Delete</a>
+                  {% endif %}
+                </div>
+              </div>
             </div>
+            {% endfor %}
           </div>
-          {% if forloop.counter|divisibleby:4 %}
-        </div>
-        <div class="row">
-          {% endif %}
-          {% endfor %}
         </div>
       </div>
+      {% if is_paginated %}
+      <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+          {% if page_obj.has_previous %}
+          <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link"> &laquo PREV;</a></li>
+          {% endif %}
+          {% if page_obj.has_next %}
+          <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+          {% endif %}
+        </ul>
+      </nav>
+      {% endif %}
     </div>
-  </div>
+</body>
 
   {% endblock content %}
   {% block extras %}
-    <script src="{% static 'js/stars.js' %}"></script>
-    <script src="{% static 'js/delete-review.js' %}"></script>
+  <script src="{% static 'js/stars.js' %}"></script>
+  <script src="{% static 'js/delete-review.js' %}"></script>
   {% endblock %}

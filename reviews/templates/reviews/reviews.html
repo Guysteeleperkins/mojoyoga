@@ -31,9 +31,10 @@
                 {% endif %}
               </div>
               <div class="card mb-1 review-cards" style="width: 18rem;">
-                <div class="card-body">
+                <div class="card-body d-flex flex-column">
                   <h5 class="card-title">{{ review.author }}</h5>
                   <p class="card-text">{{ review.content }}</p>
+                 <div class="mt-auto">
                   <p>
                     <span class="star-rating" data-rating="{{ review.rating }}"></span>
                   </p>
@@ -41,6 +42,7 @@
                   {% if user.is_authenticated and review.author == user %}
                   <a href="{% url 'review_edit' review.pk %}" class="btn btn-primary">Edit/Delete</a>
                   {% endif %}
+                 </div>
                 </div>
               </div>
             </div>

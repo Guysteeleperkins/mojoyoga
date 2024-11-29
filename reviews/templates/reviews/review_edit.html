@@ -2,69 +2,100 @@
 {% load static %}
 {% block content %}
 
-<h1>Edit review</h1>
-
-{% if user.is_authenticated %}
-<form method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    <div>
-        {{ form.rating }}
-    </div>
-    <br>
-    <div>
-        {{ form.content }}<br>
-    </div>
-    <br>
-    <div>
-        {% if form.instance.image %}
-        <div>
-            <p>Current Image:</p>
-            <img src="{{ form.instance.image.url }}" alt="Current Review Image"
-                style="max-width: 200px; max-height: 200px;">
+<div class="container-fluid hero">
+    <div class="row lar-header">
+        <div class="col-12 d-flex align-items-center justify-content-center">
+            <h1 class="mb-4">Edit Review</h1>
         </div>
-        <div>
-            <label for="{{ form.image.id_for_label }}">Replace image:</label>
-            {{ form.image }}
-        </div>
-        {% else %}
-        <p>No image uploaded yet.</p>
-        {{ form.image }}
-        {% endif %}
     </div>
-    <br>
+    <div class="row">
+        <div class="col-12 d-flex align-items-center justify-content-center">
+            <div class="leave-a-review col-md-6 p-4 form-container">
 
-    <!-- <div>
-            {{ form.is_anonymous }} <label for="id_is_anonymous">Hide username</label><br>
-        </div> -->
-    <button type="submit" class="btn btn-primary">Save Changes</button>
-    <button type="button" class="btn btn-danger btn-delete" review_id="{{ review.pk }}">Delete Review</button>
-</form>
-<!-- Delete confirmation modal -->
-<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="deleteModalLabel">Delete review?</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                {% if user.is_authenticated %}
+                <form method="post" enctype="multipart/form-data" class="review-form">
+                    {% csrf_token %}
+                    <div class="row leave-rating">
+                        <div class="col-12">
+                            <p>
+                                How would you rate your experience?
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row lar-rating">
+                        <div class="col-12">
+                            {{ form.rating }}
+                        </div>
+                    </div>
+                    <div class="row lar-content">
+                        <div class="col-12">
+                            <p>
+                                Write your review
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row lar-content">
+                        <div class="col-10">
+                            {{ form.content }}
+                        </div>
+                    </div>
+                    <div class="row lar-image">
+                        <p>
+                            Upload an image (Optional)
+                        </p>
+                        <div class="col-6">
+                            <div>
+                                {% if form.instance.image %}
+                                <div>
+                                    <p>Current Image:</p>
+                                    <img src="{{ form.instance.image.url }}" alt="Current Review Image"
+                                        style="max-width: 200px; max-height: 200px;">
+                                </div>
+                                <div>
+                                    <label for="{{ form.image.id_for_label }}">Replace image:</label>
+                                    {{ form.image }}
+                                </div>
+                                {% else %}
+                                <p>No image uploaded yet.</p>
+                                {{ form.image }}
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row lar-submit">
+                        <div class="col-8">
+                            <button type="submit" class="btn btn-primary">Save Changes</button>
+                            <button type="button" class="btn btn-danger btn-delete" review_id="{{ review.pk }}">Delete
+                                Review</button>
+                        </div>
+                    </div>
+                </form>
+                {% endif %}
             </div>
-            <div class="modal-body">
-                Are you sure you want to delete your review?
-                This action cannot be undone.
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <a id="deleteConfirm" href="#" class="btn
+        </div>
+    </div>
+    <!-- Delete confirmation modal -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteModalLabel">Delete review?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to delete your review?
+                    This action cannot be undone.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <a id="deleteConfirm" href="#" class="btn
         btn-danger">Delete</a>
+                </div>
             </div>
         </div>
     </div>
 </div>
-{% else %}
-<p>You must be <a href="{% url 'leave_review' %}">logged in</a> to leave a review.</p>
-<p>If you don't have an account, <a href="{% url 'account_signup' %}">sign up</a> to get started.</p>
-{% endif %}
-
 {% endblock content %}
 {% block extras %}
-    <script src="{% static 'js/delete-review.js' %}"></script>
+<script src="{% static 'js/delete-review.js' %}"></script>
 {% endblock %}

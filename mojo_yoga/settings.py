@@ -70,8 +70,6 @@ MIDDLEWARE = [
     'allauth.account.middleware.AccountMiddleware',
 ]
 
-X_FRAME_OPTIONS = 'ALLOWALL'
-
 ROOT_URLCONF = 'mojo_yoga.urls'
 
 TEMPLATES = [

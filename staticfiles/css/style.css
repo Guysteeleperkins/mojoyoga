@@ -15,13 +15,19 @@
     background-color: rgb(134, 204, 227);
 }
 
-#navbarText {
+.navbar-text {
     margin-right: 10%;
+    font-family: Roboto, sans-serif;
+    font-size: 19px;
+}
+
+.navbar-text a {
+    border-radius: 5px;
 }
 
 footer {
     position: static;
-    background-color: rgba(0, 0, 128, 0.839);
+    background-color: #5A7D9A;
     bottom: 0;
 }
 
@@ -67,8 +73,12 @@ footer p {
     color: white;
 }
 
+.welcome-image img {
+    border-radius: 50%;
+}
+
 .welcome-intro {
-    background-color: rgb(219, 219, 219);
+    background-color: #f5f3dc;
 }
 
 .welcome-details h2 {
@@ -101,6 +111,15 @@ footer p {
     max-height: 450px;
 }
 
+#review-login p {
+    color: white;
+}
+
+#review-login a {
+    color: #FFA500;
+    font-weight: bold;
+}
+
 .reviews-header {
     text-align: center;
     justify-content: center;
@@ -118,7 +137,7 @@ footer p {
 
 .review-cards a {
     width: 100px;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .card-text {
@@ -159,7 +178,7 @@ footer p {
 .leave-a-review {
     margin-top: 20px;
     background-color: rgba(0, 0, 0, 0.5);
-    color: black;
+    color: white;
 }
 
 .lar-header {
@@ -194,6 +213,12 @@ footer p {
     border-radius: 10px;
 }
 
+.review-a a {
+    text-decoration: none;
+    color: #FFA500;
+    font-style: italic;
+}
+
 /* Review detail */
 
 .review-detail-cards {
@@ -217,6 +242,59 @@ footer p {
     object-fit: cover;
 }
 
+/* Buttons */
+
+.navbar-text a:hover {
+    border-radius: 5px;
+    background-color: rgb(75, 106, 123);
+    color: white;
+}
+
+
+.pagination-btn a {
+    background-color: rgb(134, 204, 227);
+    border-radius: 5px;
+    border: 1px solid rgb(75, 106, 123);
+    color: rgb(33, 37, 41);
+    font-family: Roboto, sans-serif;
+}
+
+.pagination-btn a:hover {
+    background-color: rgb(75, 106, 123);
+    color: white;
+    border-radius: 5px;
+    border: 1px solid rgb(75, 106, 123);
+    font-family: Roboto, sans-serif;
+}
+
+.signup-link {
+    color: #FFA500;
+    text-decoration: none;
+    font-style: italic;
+}
+
+.btn-signup, .btn-review {
+    background-color: rgb(134, 204, 227);
+    border-radius: 5px;
+    border: 1px solid rgb(75, 106, 123);
+    color: rgb(33, 37, 41);
+    font-family: Roboto, sans-serif;
+}
+
+.btn-signup:hover, .btn-review:hover {
+    background-color: rgb(75, 106, 123);
+    color: white;
+    border-radius: 5px;
+    border: 1px solid rgb(75, 106, 123);
+    font-family: Roboto, sans-serif;
+}
+
+.signup-a a {
+    color: #FFA500;
+    text-decoration: none;
+    font-style: italic;
+}
+
  /* Media Querys */
 
  @media (max-width: 576px) {
@@ -233,5 +311,19 @@ footer p {
         text-transform: uppercase;
         font-size: 50px;
         font-family: "Funnel Display", sans-serif;
+    }
+}
+
+@media (min-width: 992px) {
+    .hero-review {
+        position: relative;
+        background-position: center 50%;
+        background-image: url('../images/heroimage.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        min-height: 750px;
+        width: 100vw;
+        margin: 0;
     }
 }

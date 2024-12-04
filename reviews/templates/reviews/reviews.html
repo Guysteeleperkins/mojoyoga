@@ -2,68 +2,78 @@
 {% load static %}
 {% block content %}
 <!-- reviews.html starts here -->
-<body">
-  <div class="hero-review">
-    <div class="login-status position-absolute text-end">
-      {% if user.is_authenticated %}
-      <p class="text-end m-1">You are logged in as {{ user }}</p>
-      {% else %}
-      <p class="text-end m-1">You are not logged in</p>
-      {% endif %}
-    </div>
-    <div class="reviews-header">
-      <h1>Reviews</h1>
-    </div>
-    <div class="container-fluid">
-      <div class="row">
-  
-        <!-- Reviews Column -->
-        <div class="col-12 mt-3 left">
-          <div class="row">
-            {% for review in reviews_list %}
-            <div class="col-12 col-sm-6 col-lg-4 col-xl-3 d-flex flex-column align-items-center full-review">
-              <div class="review-image">
-                <!-- Display the image if it exists -->
-                {% if review.image %}
-                <img src="{{ review.image.url }}" alt="Review image">
-                {% else %}
-                <img src="{% static 'images/defaultimage.jpg' %}" alt="Mojo Logo">
-                {% endif %}
-              </div>
-              <div class="card mb-1 review-cards" style="width: 18rem;">
-                <div class="card-body d-flex flex-column">
-                  <h5 class="card-title">{{ review.author }}</h5>
-                  <p class="card-text">{{ review.content }}</p>
-                 <div class="mt-auto">
+<div class="hero-review d-flex flex-column">
+  <div class="login-status position-absolute text-end">
+    {% if user.is_authenticated %}
+    <p class="text-end m-1">You are logged in as {{ user }}</p>
+    {% else %}
+    <p class="text-end m-1">You are not logged in</p>
+    {% endif %}
+  </div>
+  <div class="position-absolute text-start" id="review-login">
+    {% if user.is_authenticated %}
+    <p class="text-end m-1">Leave a <a class="nav-link {% if request.path == '/leave-a-review/' %}active{% endif %}" aria-current="page"
+      href="{% url 'leave_review' %}">review</a></p>
+    {% else %}
+    <p class="d-flex align-items-center m-1"><a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page"
+      href="{% url 'account_login' %}">Log in</a> to leave a review</p>
+    {% endif %}
+  </div>
+  <div class="reviews-header">
+    <h1>Reviews</h1>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+
+      <!-- Reviews Column -->
+      <div class="col-12 mt-3 left">
+        <div class="row">
+          {% for review in reviews_list %}
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 d-flex flex-column align-items-center full-review">
+            <div class="review-image">
+              <!-- Display the image if it exists -->
+              {% if review.image %}
+              <img src="{{ review.image.url }}" alt="Review image">
+              {% else %}
+              <img src="{% static 'images/defaultimage.jpg' %}" alt="Mojo Logo">
+              {% endif %}
+            </div>
+            <div class="card mb-1 review-cards" style="width: 18rem;">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">{{ review.author }}</h5>
+                <p class="card-text">{{ review.content }}</p>
+                <div class="mt-auto">
                   <p>
                     <span class="star-rating" data-rating="{{ review.rating }}"></span>
                   </p>
-                  <a href="{% url 'review_detail' review.pk %}" class="btn btn-primary">See Review</a>
+                  <a href="{% url 'review_detail' review.pk %}" class="btn btn-primary btn-review">See Review</a>
                   {% if user.is_authenticated and review.author == user %}
-                  <a href="{% url 'review_edit' review.pk %}" class="btn btn-primary">Edit/Delete</a>
+                  <a href="{% url 'review_edit' review.pk %}" class="btn btn-primary btn-review">Edit/Delete</a>
                   {% endif %}
-                 </div>
                 </div>
               </div>
             </div>
-            {% endfor %}
           </div>
+          {% endfor %}
         </div>
       </div>
-      {% if is_paginated %}
-      <nav aria-label="Page navigation">
-        <ul class="pagination justify-content-center">
-          {% if page_obj.has_previous %}
-          <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link"> &laquo PREV;</a></li>
-          {% endif %}
-          {% if page_obj.has_next %}
-          <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
-          {% endif %}
-        </ul>
-      </nav>
-      {% endif %}
     </div>
-</body>
+  </div>
+  <div class="row mt-auto pagination-btn">
+    {% if is_paginated %}
+    <nav aria-label="Page navigation">
+      <ul class="pagination justify-content-center">
+        {% if page_obj.has_previous %}
+        <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link"> &laquo; Prev</a></li>
+        {% endif %}
+        {% if page_obj.has_next %}
+        <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> Next &raquo;</a></li>
+        {% endif %}
+      </ul>
+    </nav>
+    {% endif %}
+  </div>
+</div>
 
   {% endblock content %}
   {% block extras %}

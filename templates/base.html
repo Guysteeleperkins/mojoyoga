@@ -31,7 +31,7 @@
 
 </head>
 
-<body class="d-flex flex-column h-100 main-bg">
+<body class="d-flex flex-column h-100">
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light">
@@ -46,7 +46,7 @@
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarText">
+            <div class="collapse navbar-collapse navbar-text" id="navbarText">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item me-3">
                         <a class="nav-link {% if request.path == '' %}active{% endif %}" aria-current="page"
@@ -68,7 +68,7 @@
                     {% else %}
                     <li class="nav-item me-3">
                         <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
-                            href="{% url 'account_signup' %}">Register</a>
+                            href="{% url 'account_signup' %}">Sign Up</a>
                     </li>
                     <li class="nav-item me-3">
                         <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page"
@@ -89,7 +89,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer mt-auto py-3 dark-bg">
+    <footer class="footer">
         <p class="m-0 text-center">
             <i class="fab fa-facebook-square ms-3"></i>
             <i class="fab fa-twitter-square ms-3"></i>

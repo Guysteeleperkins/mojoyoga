@@ -59,9 +59,9 @@
                     </div>
                 </form>
                 {% else %}
-                <p class="text-muted">You must be <a href="{% url 'leave_review' %}">logged in</a> to leave a review.
+                <p class="review-a">You must be <a href="{% url 'leave_review' %}">logged in</a> to leave a review.
                 </p>
-                <p class="text-muted">If you don't have an account, <a href="{% url 'account_signup' %}">sign up</a> to
+                <p class="review-a">If you don't have an account, <a href="{% url 'account_signup' %}">sign up</a> to
                     get started.</p>
                 {% endif %}
             </div>

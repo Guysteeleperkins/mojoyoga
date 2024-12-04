@@ -69,7 +69,6 @@ footer p {
 .login-status {
     top: 5px;
     right: 5px;
-    z-index: 10;
     color: white;
 }
 
@@ -107,18 +106,15 @@ footer p {
     margin: 0;
 }
 
+.login-status a {
+    color: #FFA500;
+    padding-left: 5px;
+}
+
 .full-review {
     max-height: 450px;
 }
 
-#review-login p {
-    color: white;
-}
-
-#review-login a {
-    color: #FFA500;
-    font-weight: bold;
-}
 
 .reviews-header {
     text-align: center;

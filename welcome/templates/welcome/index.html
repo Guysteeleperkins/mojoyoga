@@ -5,11 +5,11 @@
 
 <body>
     <div class="container-fluid d-flex align-items-center justify-content-center text-center p-0 hero">
-        <div class="login-status position-absolute text-end">
+        <div class="login-status position-absolute">
             {% if user.is_authenticated %}
-            <p class="text-end m-3">You are logged in as {{ user }}</p>
+            <p class="m-3">You are logged in as {{ user }}</p>
             {% else %}
-            <p class="text-end m-3">You are not logged in</p>
+            <p class="m-3">You are not logged in</p>
             {% endif %}
         </div>
         <div class="row">

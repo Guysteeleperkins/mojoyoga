@@ -1,6 +1,6 @@
 # MojoYoga
 
-![MojoYoga reposive screenshot]()
+![MojoYoga reposive screenshot](./documentation/images/MojoYogaRepsonsive.png)
 
 ## Introduction 
 
@@ -12,7 +12,7 @@ Live site: [MojoYoga](https://mojoyoga-f4267f7b0b57.herokuapp.com/)
 
 ## Table of Contents
 
-- [FreeFido](#freefido)
+- [MojoYoga](#MojoYoga)
   - [Introduction](#introduction)
   - [Table of Contents](#table-of-contents)
   - [Overview](#overview)
@@ -134,6 +134,8 @@ I had 14 working days to complete this project and had learned from previous pro
 
 ### User Stories
 
+## Must Haves
+
 | **User Story**                                                                                                                                                     | **Acceptance Criteria**                                                                                                                                                                                                                                                                              | **Priority**  |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
 | As a **user**, I must be able to **securely sign up and log in using AllAuth** so that I can **access the site and leave reviews**.                                | - Users can sign up using email or social authentication methods (e.g., Google). <br>- Users can log in and are redirected to the homepage/dashboard. <br>- If login fails, an error message is displayed. <br>- Users can reset their password via email.                                             | **MUST HAVE** |
@@ -142,5 +144,31 @@ I had 14 working days to complete this project and had learned from previous pro
 | As a **logged-in user**, I must be able to **update my own review** so that I can **correct or change my feedback after submitting it**.                           | - Logged-in users can edit their reviews via their profile or a "My Reviews" page. <br>- Users can edit both the text and rating of their review. <br>- Changes are saved, and the updated review is displayed publicly with an updated timestamp.                                                   | **MUST HAVE** |
 | As a **logged-in user**, I must be able to **delete my own review** so that I can **remove it if I no longer want it to be visible**.                              | - Logged-in users can delete reviews via their profile or "My Reviews" page. <br>- Deleted reviews no longer appear publicly, and a success message is shown (e.g., "Your review has been deleted").                                                                                                  | **MUST HAVE** |
 | As a **user**, I must be able to **navigate the website easily** so that I can **find the information and features I need without confusion**.                    | - Clear navigation menu with intuitive labels (e.g., Home, Reviews, About, Profile). <br>- Navigation is consistent across all pages. <br>- The design is responsive, adjusting layout appropriately for mobile, tablet, and desktop views.                                                          | **MUST HAVE** |
+
+
+## Should Haves
+
+| **User Story**                                                                                                                | **Acceptance Criteria**                                                                                                                                                                | **Priority**  |
+|------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
+| As a **user**, I can **interact with the site effortlessly** so that I can **accomplish my tasks without confusion**.         | - Form inputs (e.g., review submission, signup) are clearly labeled with instructions if needed. <br>- Error messages and validation are clear and helpful (e.g., "Please enter a valid email address"). <br>- Buttons and links have clear hover or active states to indicate interaction. | **MUST HAVE** |
+| As a **user**, I am **visually engaged with the website design** so that my experience is more enjoyable.                       | - High-quality images or icons representing reviews and key features. <br>- Consistent use of brand colours that complement the overall design. <br>- Clean and modern aesthetic that aligns with the theme of wellness and relaxation. | **MUST HAVE** |
+| As a **logged-in user**, I can **rate my experience with a 1 to 5 star or numeric scale** so that I can **provide more meaningful feedback**. | - User can rate a retreat with 1 to 5 stars when submitting a review. <br>- Rating is visually represented next to the review text.                                                   | **MUST HAVE** |
+
+## Could Haves
+
+| **User Story**                                                                                                                  | **Acceptance Criteria**                                                                                                                                                                     | **Priority**  |
+|-------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
+| As a **logged-in user**, I can **view and manage a personal profile page** so that I can **see and edit my reviews and update my personal information**. | - User can view their profile, including all past reviews they’ve submitted. <br>- User can update their name, email, and password from their profile page. <br>- User can delete or edit their reviews directly from their profile page. | **MUST HAVE** |
+| As a **user**, I can **comment on other users' reviews** so that I can **ask questions or provide additional feedback**.         | - Users can comment on reviews to ask questions or offer insights. <br>- Each comment is visible below the associated review. <br>- Comment section supports threaded replies for better interaction. | **MUST HAVE** |
+| As a **user**, I can **"Like" or "Dislike" reviews** so that I can **indicate helpfulness or agreement**.                          | - Users can click a thumbs-up or thumbs-down icon on reviews to show if they find the review helpful.                                                                                         | **MUST HAVE** |
+| As a **user**, I can **access a booking page** so that I can **show interest in an upcoming retreat I want to attend**.            | - A page dedicated to show various upcoming events (retreats). <br>- A button that shows that the user is interested (e.g., a thumbs-up). <br>- Thumbs-up has a numerical value so other users can see how many people are interested in this event. | **MUST HAVE** |
+
+## Won't Haves
+
+| **User Story**                                                                                                          | **Reason for Exclusion**                                                                                                                                                                                              | **Priority**  |
+|-------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
+| As a **user**, I can **search and filter reviews** so that I can **find the relevant feedback**.                         | Search feature can be considered in future versions, but it’s not necessary for the MVP (Minimum Viable Product).                                                                                                      | **WON'T HAVE**  |
+| As a **non-English speaking user**, I can **have the website available in my native language** so that I can **use it more comfortably**. | Language support can be considered in future versions, but it’s not necessary for the MVP (Minimum Viable Product).                                                                                                   | **WON'T HAVE**  |
+| As a **user**, I can **book a retreat directly through the website after reading reviews** so that I can **attend the retreat**. | Booking functionality is not a core part of this version of the app. It's something to consider for future expansion.                                                                                                | **WON'T HAVE**  |
 
 

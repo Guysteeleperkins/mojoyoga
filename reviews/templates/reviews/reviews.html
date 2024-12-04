@@ -12,7 +12,7 @@
   </div>
   <div class="position-absolute text-start" id="review-login">
     {% if user.is_authenticated %}
-    <p class="text-end m-1">Leave a <a class="nav-link {% if request.path == '/leave-a-review/' %}active{% endif %}" aria-current="page"
+    <p class="d-flex align-items-center m-1">Leave a<a class="nav-link {% if request.path == '/leave-a-review/' %}active{% endif %}" aria-current="page"
       href="{% url 'leave_review' %}">review</a></p>
     {% else %}
     <p class="d-flex align-items-center m-1"><a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page"

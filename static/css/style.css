@@ -289,6 +289,12 @@ footer p {
     font-family: Roboto, sans-serif;
 }
 
+.signup-a a {
+    color: #FFA500;
+    text-decoration: none;
+    font-style: italic;
+}
+
  /* Media Querys */
 
  @media (max-width: 576px) {

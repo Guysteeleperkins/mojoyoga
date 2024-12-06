@@ -172,3 +172,44 @@ I had 14 working days to complete this project and had learned from previous pro
 | As a **user**, I can **book a retreat directly through the website after reading reviews** so that I can **attend the retreat**. | Booking functionality is not a core part of this version of the app. It's something to consider for future expansion.                                                                                                | **WON'T HAVE**  |
 
 
+## Scope Plane
+
+Main features:
+- A calming and inviting website that fulfils user needs
+- Responsive website for users on all devieces
+- User Authentication
+- User Profile creation and editing
+- Leave a review feature with full CRUD functionality
+
+Due to a lot of new content that had been covered in the course just a few weeks before this project began I wanted to make sure that I didn't overreach and set my goals too high. Due to the new technologies such as Python, Django, Databases and Cloudinary that I had covered recently and were still new to me, I took this project as a learning objective as well as building a fully functional app. 
+
+## Structural Plane
+
+Having had a website to base mine off this was a very easy step. I already had a good basis of what works regarding to where items would be positioned and how they would fit into each other to create a smooth experience for the user. I wanted to keep things simple and as I completed tasks it would free up time to add some of the "Could have" features.
+
+NavBar - Having had some difficulties with this before I knew how to start it straight away. Bootstrap provides an easy to use NavBar which is easily manipulated with custom CSS. In prevous projects had a experiemented with different kinds of buttons within the navbar but the simple text with some button hightlights when hovering always looked the best in my opinion - best not to over complicate it!
+
+Hero Image - As well as the website I was using for inspirations and some previous projects that met the criteria for passing a large hero image that spanned over the whole website on all pages really stuck out as a nice feature and it kept consistency throughout. 
+
+Reviews / Review Details / Forms - Also inspired from another project that was shown to our cohort I loved the background colour of black with the opacity set to 0.5 to let the hero image show through but to create an obvious division between the background and the cards. This was kept consistent throughout the website and looks very smart.
+
+## Skeleton and Surface Planes
+
+### Wireframes
+
+### ERD (Entity Relationship Diagram)
+
+### Security 
+
+# Features
+
+## User View
+
+## CRUD Functionality
+
+## Future Features
+
+# Technologies & Languages Used 
+
+
+

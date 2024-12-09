@@ -363,6 +363,94 @@ footer p {
     }
 }
 
+/* About Page */
+
+.mojo-intro {
+    background-color: #d3d2d2;
+}
+
+.house-bg {
+    position: relative;
+    background-position: center 50%;
+    background-image: url('../images/bluedoor.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    width: 100vw;
+    margin: 0;
+    border-top: 10px solid rgb(134, 204, 227);
+    border-bottom: 10px solid rgb(134, 204, 227);
+    color: white;
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+}
+
+.house-bg p {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.redsky-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.about-us {
+    background-color: #d3d2d2;
+}
+
+.about-card-a, .about-card-b {
+    max-width: 26rem;
+    border-radius: 18px;
+    border: 2px solid rgba(0, 0, 0, 0.425);
+    height: 550px;
+}
+
+.about-card-a.expanded-card-a {
+    max-width: 26rem;
+    border-radius: 18px;
+    border: 2px solid rgba(0, 0, 0, 0.425);
+    height: 930px;
+}
+
+.about-card-b.expanded-card-b {
+    max-width: 26rem;
+    border-radius: 18px;
+    border: 2px solid rgba(0, 0, 0, 0.425);
+    height: 700px;
+}
+
+.about-card-a img, .about-card-b img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 250px;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.about-card-a.card-body, .about-card-b.card-body {
+    height: fit-content;
+}
+
+.about-card-a p, .about-card-a h5 {
+    color: black;
+}
+
+.about-card-b p, .about-card-b h5 {
+    color: black;
+}
+
+.about-card-a button, .about-card-b button {
+    border: none;
+    background-color: white;
+    font-family: "Funnel Display", sans-serif;
+    color: rgb(134, 204, 227);
+}
+
+
+
 
 @media (min-width: 992px) {
     .hero-review {

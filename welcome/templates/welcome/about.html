@@ -1,0 +1,214 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<body>
+    <div class="container-fluid d-flex align-items-center justify-content-center text-center p-0 hero">
+        <div class="login-status position-absolute">
+            {% if user.is_authenticated %}
+            <p class="m-3">You are logged in as {{ user }}</p>
+            {% else %}
+            <p class="m-3">You are not logged in</p>
+            {% endif %}
+        </div>
+        <div class="row">
+            <div class="col hero-text">
+                <h1>About Mojo Yoga Morocco</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid text-center p-1 mojo-intro">
+        <div class="row">
+            <div class="col-1 col-sm-2 col-md-3">
+            </div>
+            <div class="col-10 col-sm-8 col-md-6">
+                <br>
+                <br>
+                <p>
+                    <strong>'Mojo ~ a magic charm, talisman, or spell, influence, especially magic power'</strong>
+                </p>
+                <p>
+                    Mojo” first appeared in the 1920s in the southern United States from the Gullah word “moco” (magic),
+                    Gullah being Creole spoken by some groups of African-Americans. The ultimate root of “mojo” was the
+                    word “moco'o,” which means “shaman or medicine man” in the African language Fulani.
+                </p>
+                <p>
+                    <strong>Now the word “Mojo” has become a word for one’s inner spirit or inner power.</strong>
+                </p>
+                <br>
+                <br>
+
+            </div>
+            <div class="col-1 col-md-2">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid text-center p-1">
+        <div class="row">
+            <div class="col-1 col-sm-1 col-md-2">
+            </div>
+            <div class="col-10 col-sm-10 col-md-8">
+                <br>
+                <br>
+                <div class="row">
+                    <div class="col-12 col-xl-6">
+                        <div class="p-3 redsky-image">
+                            <img src="/static/images/redsky.jpg" alt="Red sky">
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-6">
+                        <br>
+                        <p>
+                            In 2018 Joanna and Mohamed met for the first time. Joanna was feeling a little lost, her
+                            spirit
+                            jaded. Mohamed had a similar feeling of stagnancy and inertia. They recognised a kindred
+                            spirit in
+                            each other and from there grew their plans for a future living and working together.
+                        </p>
+                        <p>
+                            Mojo Yoga Morocco was born from this idea of finding the inner spirit or magic and somehow
+                            it felt
+                            appropriate as our names together make Mo Jo!
+                        </p>
+                        <p>
+                            We aspire to helping our guests connect with their inner magic, their Mojo and it seems
+                            fitting to
+                            associate with a word that has it’s roots in Africa.
+                        </p>
+                    </div>
+                </div>
+                <br>
+                <br>
+
+            </div>
+            <div class="col-1 col-sm-2 col-md-2">
+            </div>
+        </div>
+    </div>
+    <div class="about-us">
+        <div class="container-fluid house-bg d-flex align-items-center justify-content-center">
+            <div class="row">
+                <div class="col-sm-12 col-md-5 ms-auto">
+                    <p>
+                        In February 2022, Mohamed and Joanna began a project building a house in the mountains 3km
+                        inland
+                        from the famous surf village of Taghazout. The house was completed in April 2023
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid text-center">
+            <br>
+            <h1>
+                - About us -
+            </h1>
+            <br>
+            <div class="row">
+                <div class="col-1 col-md-2"></div>
+                <div class="col-10 col-md-8">
+                    <p>
+                        Mohamed and Joanna offer small, exclusive yoga and surf holidays. Joanna is a postgraduate of
+                        the Devon
+                        School of Yoga. Mohamed is a qualified surf instructor and musician.
+                    </p>
+                </div>
+                <div class="col-1 col-md-2"></div>
+            </div>
+            <br>
+        </div>
+        <div class="container-fluid pb-4">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 d-flex align-items-start justify-content-center mb-4 text-center">
+                    <div class="about-card-a card">
+                        <img src="/static/images/joanna.jpg" class="card-img-top" alt="Joanna">
+                        <div class="card-body">
+                            <h5 class="card-title">Joanna Steele-Perkins</h5>
+                            <p>Yoga Teacher</p>
+                            <div class="short-text">
+                                <p>
+                                    I am an English yoga teacher living in Taghazout Agadir, Morocco. Before moving to
+                                    Morocco, I taught Body Balance and Yoga in sports centres and village halls in
+                                    beautiful
+                                    Somerset, UK, where I had lived most of my life.
+                                </p>
+                            </div>
+                            <div class="long-text-a" style="display: none;">
+                                <div>
+                                    <p>
+                                        I was looking for a change and fell in love with Morocco when I visited in
+                                        December
+                                        2019. I took the momentous decision to move to Morocco in October 2019, where I
+                                        have
+                                        been living with my Mohamed ever since.
+                                    </p>
+                                </div>
+                                <br>
+                                <div>
+                                    <p>
+                                        My training enables me to offer a variety of different classes, particularly
+                                        Vinyasa
+                                        Flow and Yin. I have experience teaching large and small classes and one-to-one
+                                        classes. My approach is to be inclusive and offer yoga to all ages and
+                                        abilities.
+
+                                    </p>
+                                </div>
+                                <br>
+                                <div>
+                                    <p>
+                                        <strong>Qualifications</strong>
+                                        <br>
+                                        Devon School of Yoga - 500 hrs TTC
+                                        <br>
+                                        Verity Sawyer - Yin & Five Elements TT - 50 hrs
+                                    </p>
+                                </div>
+                            </div>
+                            <button class="read-more-btn-a" onclick="toggleTextA()">Read More..</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 d-flex align-items-start justify-content-center mb-4 text-center">
+                    <div class="about-card-b card">
+                        <img src="/static/images/mohamed.jpg" class="card-img-top" alt="Mohamed">
+                        <div class="card-body">
+                            <h5 class="card-title">Mohamed El Aafifi</h5>
+                            <p>Surf instructor</p>
+                            <div class="short-text">
+                                <p>
+                                    Mohamed was born and grew up in “Paradise Valley” near Taghazout Agadir. He is a
+                                    talented musician, mostly playing a variety of string instruments and writing music.
+                                    He
+                                    has had a varied career, including working as a sound editor.
+                                </p>
+                            </div>
+                            <div class="long-text-b" style="display: none;">
+                                <div>
+                                    <p>
+                                        Mohamed then had a change of career and became a surf instructor ten years ago,
+                                        but
+                                        he still enjoys musical pursuits.
+                                    </p>
+                                </div>
+                                <div>
+                                    <p>
+                                        <strong>Qualifications</strong>
+                                        <br>
+                                        BF1 Surf Instructor
+                                    </p>
+                                </div>
+                            </div>
+                            <button class="read-more-btn-b" onclick="toggleTextB()">Read More..</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+{% endblock %}
+{% block extras %}
+<script src="{% static 'js/readmore.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="gallery-bg-colour">
+    <div class="container-fluid d-flex align-items-center justify-content-center text-center p-0 hero-gallery">
+        <div class="login-status position-absolute">
+            {% if user.is_authenticated %}
+            <p class="m-3">You are logged in as {{ user }}</p>
+            {% else %}
+            <p class="m-3">You are not logged in</p>
+            {% endif %}
+        </div>
+        <div class="row">
+            <div class="col hero-text">
+                <h1>Gallery</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid text-center gallery-page">
+        <div class="row">
+            <div class="col-md-1">
+    
+            </div>
+            <div class="col-md-10">
+                <div class="row">
+                    <div class="col col-md-4">
+                        <img src="/static/images/gallery1.jpg" alt="Red sky">
+                    </div>
+                    <div class="col col-md-4">
+                        <img src="/static/images/gallery2.jpg" alt="Red sky">
+                    </div>
+                    <div class="col col-md-4">
+                        <img src="/static/images/gallery3.jpg" alt="Red sky">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-md-4">
+                        <img src="/static/images/gallery4.jpg" alt="Red sky">
+                    </div>
+                    <div class="col col-md-4">
+                        <img src="/static/images/gallery5.jpg" alt="Red sky">
+                    </div>
+                    <div class="col col-md-4">
+                        <img src="/static/images/gallery6.jpg" alt="Red sky">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-md-4">
+                        <img src="/static/images/gallery7.jpg" alt="Red sky">
+                    </div>
+                    <div class="col col-md-4">
+                        <img src="/static/images/gallery8.jpg" alt="Red sky">
+                    </div>
+                    <div class="col col-md-4">
+                        <img src="/static/images/gallery9.jpg" alt="Red sky">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-md-4">
+                        <img src="/static/images/gallery10.jpg" alt="Red sky">
+                    </div>
+                    <div class="col col-md-4">
+                        <img src="/static/images/gallery11.jpg" alt="Red sky">
+                    </div>
+                    <div class="col col-md-4">
+                        <img src="/static/images/gallery12.jpg" alt="Red sky">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-md-4">
+                        <img src="/static/images/gallery13.jpg" alt="Red sky">
+                    </div>
+                    <div class="col col-md-4">
+                        <img src="/static/images/gallery14.jpg" alt="Red sky">
+                    </div>
+                    <div class="col col-md-4">
+                        <img src="/static/images/gallery15.jpg" alt="Red sky">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-md-4">
+                        <img src="/static/images/gallery16.jpg" alt="Red sky">
+                    </div>
+                    <div class="col col-md-4">
+                        <img src="/static/images/gallery17.jpg" alt="Red sky">
+                    </div>
+                    <div class="col col-md-4">
+                        <img src="/static/images/gallery18.jpg" alt="Red sky">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1">
+    
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

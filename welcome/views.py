@@ -13,3 +13,9 @@ class AboutPage(TemplateView):
     Displays about page"
     """
     template_name = 'welcome/about.html'
+
+class GalleryPage(TemplateView):
+    """
+    Displays about page"
+    """
+    template_name = 'welcome/gallery.html'

@@ -60,6 +60,10 @@
                             href="{% url 'about' %}">About</a>
                     </li>
                     <li class="nav-item me-3">
+                        <a class="nav-link {% if request.path == 'gallery' %}active{% endif %}" aria-current="page"
+                            href="{% url 'gallery' %}">Gallery</a>
+                    </li>
+                    <li class="nav-item me-3">
                     <a class="nav-link {% if request.path == 'reviews' %}active{% endif %}" aria-current="page"
                         href="{% url 'reviews' %}">Reviews</a>
                     </li>
@@ -98,9 +102,8 @@
     <!-- Footer -->
     <footer class="footer">
         <p class="m-0 text-center">
-            <i class="fab fa-facebook-square ms-3"></i>
-            <i class="fab fa-twitter-square ms-3"></i>
-            <i class="fab fa-instagram-square ms-3"></i>
+            <i class="fab fa-facebook-square ms-3"><a href="https://www.facebook.com/mojoyogamorocco/?eid=ARBJGO-xNSNj1IkPllObzMD6iSEXqtphqwGWOOEx7uOKNQG-sYekxR-qdZYmCR4ynfenLRrOyMAOfkCn"></a></i>
+            <i class="fab fa-instagram-square ms-3"><a href="https://www.instagram.com/mojoyoga_morocco/"></a></i>
         </p>
         <p class="m-0 text-center">
             {% block copyright %}

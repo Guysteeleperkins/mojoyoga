@@ -77,7 +77,7 @@ footer p {
 }
 
 .welcome-intro {
-    background-color: #f5f3dc;
+    background-color: #d3d2d2;
 }
 
 .welcome-details h2 {
@@ -312,61 +312,12 @@ footer p {
     font-style: italic;
 }
 
- /* Media Querys */
-
- @media (max-width: 576px) {
-    .reviews-header {
-        text-align: center;
-        justify-content: center;
-        font-family: "Funnel Display", sans-serif;
-        color: white;
-        padding-top: 40px;
-    }
-
-    .hero-text h1 {
-        color: white;
-        text-transform: uppercase;
-        font-size: 50px;
-        font-family: "Funnel Display", sans-serif;
-    }
-
-    /* Review Detail */
-
-    .full-review-detail {
-        max-height: 500px;
-    }
-    
-    .review-cards-detail {
-        background-color: rgba(0, 0, 0, 0.5);
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
-        width: 20rem;
-    
-    }
-    
-    .review-cards a {
-        width: 100px;
-        font-size: 14px;
-    }
-    
-    .review-image-detail {
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-        overflow: hidden;
-        width: 20rem;
-    }
-    
-    .review-image-detail img {
-        width: 20rem;
-        height: 250px;
-        object-fit: cover;
-    }
-}
-
 /* About Page */
 
+
 .mojo-intro {
-    background-color: #d3d2d2;
+    background-color: #e3e3e3;
+    font-size: 22px;
 }
 
 .house-bg {
@@ -388,6 +339,11 @@ footer p {
 .house-bg p {
     padding-left: 20px;
     padding-right: 20px;
+}
+
+.redsky-text {
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
 }
 
 .redsky-image img {
@@ -449,7 +405,129 @@ footer p {
     color: rgb(134, 204, 227);
 }
 
+/* Gallery */
 
+.gallery-bg-colour {
+    background-color: #d3d2d2;
+}
+
+.hero-gallery {
+    position: relative;
+    background-position: center 50%;
+    background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), 
+                url('../images/galleryhero.jpg') center/cover no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+    width: 100vw;
+    margin-bottom: 30px;
+}
+
+.gallery-page {
+    padding-bottom: 20px;
+}
+
+.gallery-page.col {
+    border-radius: 10px;
+}
+
+.gallery-page div {
+    padding: 0 !important;
+}
+
+.gallery-page img {
+    width: 400px;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+    padding: 5px 0px 5px 0px;
+    border-radius: 20px;
+}
+
+
+ /* Media Querys */
+
+ @media (max-width: 420px) {
+    .gallery-page img {
+        width: 350px;
+        max-height: 300px;
+        object-fit: cover;
+        object-position: center;
+        padding: 5px 0px 5px 0px;
+        border-radius: 20px;
+    }
+ }
+
+ @media (min-width: 768px) and (max-width: 1000px) {
+    .gallery-page img {
+      width: calc(100% - 10px); /* Adjust width based on available space */
+      max-width: 100%; /* Prevent overflow */
+      height: 200px; /* Optional: Limit max height */
+      object-fit: cover;
+      object-position: center;
+      border-radius: 20px;
+    }
+  }
+
+  @media (min-width: 1000px) {
+    .gallery-page img {
+      width: calc(100% - 10px); /* Adjust width based on available space */
+      max-width: 100%; /* Prevent overflow */
+      height: 300px; /* Optional: Limit max height */
+      object-fit: cover;
+      object-position: center;
+      border-radius: 20px;
+    }
+  }
+
+ @media (max-width: 576px) {
+    .reviews-header {
+        text-align: center;
+        justify-content: center;
+        font-family: "Funnel Display", sans-serif;
+        color: white;
+        padding-top: 40px;
+    }
+
+    .hero-text h1 {
+        color: white;
+        text-transform: uppercase;
+        font-size: 50px;
+        font-family: "Funnel Display", sans-serif;
+    }
+
+    /* Review Detail */
+
+    .full-review-detail {
+        max-height: 500px;
+    }
+    
+    .review-cards-detail {
+        background-color: rgba(0, 0, 0, 0.5);
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        width: 20rem;
+    
+    }
+    
+    .review-cards a {
+        width: 100px;
+        font-size: 14px;
+    }
+    
+    .review-image-detail {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        overflow: hidden;
+        width: 20rem;
+    }
+    
+    .review-image-detail img {
+        width: 20rem;
+        height: 250px;
+        object-fit: cover;
+    }
+}
 
 
 @media (min-width: 992px) {

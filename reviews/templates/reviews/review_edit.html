@@ -10,63 +10,46 @@
     </div>
     <div class="row">
         <div class="col-12 d-flex align-items-center justify-content-center">
-            <div class="leave-a-review col-md-6 p-4 form-container">
+            <div class="col-12 col-sm-8 col-md-8 col-lg-6 col-xl-4 form-container-edit">
 
                 {% if user.is_authenticated %}
-                <form method="post" enctype="multipart/form-data" class="review-form">
+                <form method="post" enctype="multipart/form-data" class="review-form review-form-edit" action="{% url 'review_detail' review.pk %}">
                     {% csrf_token %}
-                    <div class="row leave-rating">
-                        <div class="col-12">
-                            <p>
-                                How would you rate your experience?
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row lar-rating">
-                        <div class="col-12">
-                            {{ form.rating }}
-                        </div>
-                    </div>
-                    <div class="row lar-content">
-                        <div class="col-12">
-                            <p>
-                                Write your review
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row lar-content">
-                        <div class="col-10">
-                            {{ form.content }}
-                        </div>
-                    </div>
-                    <div class="row lar-image">
-                        <p>
-                            Upload an image (Optional)
-                        </p>
-                        <div class="col-6">
-                            <div>
+                    <div class="container-fluid p-0">
+                        <div class="row">
+                            <div class="col-12">
                                 {% if form.instance.image %}
-                                <div>
-                                    <p>Current Image:</p>
-                                    <img src="{{ form.instance.image.url }}" alt="Current Review Image"
-                                        style="max-width: 200px; max-height: 200px;">
+                                <div class="current-image-edit">
+                                    <img src="{{ form.instance.image.url }}" alt="Current Review Image">
                                 </div>
-                                <div>
-                                    <label for="{{ form.image.id_for_label }}">Replace image:</label>
-                                    {{ form.image }}
+                                <div class="p-2">
+                                    <label for="id_image">Upload an image (Optional):</label>
+                                    <input type="file" name="image" id="id_image" class="form-control-file">
                                 </div>
-                                {% else %}
-                                <p>No image uploaded yet.</p>
-                                {{ form.image }}
                                 {% endif %}
                             </div>
                         </div>
-                    </div>
-                    <div class="row lar-submit">
-                        <div class="col-8">
-                            <button type="submit" class="btn btn-primary">Save Changes</button>
-                            <button type="button" class="btn btn-danger btn-delete" review_id="{{ review.pk }}">Delete
-                                Review</button>
+                        <div class="p-2">
+                            <div class="row er-content">
+                                <div class="col-12">
+                                    {{ form.content }}
+                                </div>
+                            </div>
+                            <div class="row er-rating">
+                                <div class="col-12">
+                                    {{ form.rating }}
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row lar-submit">
+                                <div class="col-6 text-center">
+                                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                                </div>
+                                <div class="col-6 text-center">
+                                    <button type="button" class="btn btn-danger btn-delete" review_id="{{ review.pk }}">Delete
+                                        Review</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </form>
@@ -88,8 +71,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <a id="deleteConfirm" href="#" class="btn
-        btn-danger">Delete</a>
+                    <a id="deleteConfirm" href="{% url 'welcome' %}" class="btn btn-danger">Delete</a>
                 </div>
             </div>
         </div>

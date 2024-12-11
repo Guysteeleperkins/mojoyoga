@@ -6,5 +6,8 @@ class ReviewForm(forms.ModelForm):
         model = Review
         fields = ['rating', 'content', 'image',]
         widgets = {
-            'image': forms.ClearableFileInput(attrs={'class': 'custom-file-input'}),
+            'image': forms.ClearableFileInput(attrs={
+                'class': 'form-control-file',
+                'multiple': False,
+            }),
         }

@@ -178,6 +178,8 @@ footer p {
     color: white;
 }
 
+/* Review Edit */
+
 .lar-header {
     height: 50px;
     color: white;
@@ -259,6 +261,7 @@ footer p {
     height: 216px;
 }
 
+
 /* Buttons */
 
 .navbar-text a:hover {
@@ -290,7 +293,8 @@ footer p {
     font-style: italic;
 }
 
-.btn-signup, .btn-review {
+.btn-signup,
+.btn-review {
     background-color: rgb(134, 204, 227);
     border-radius: 5px;
     border: 1px solid rgb(75, 106, 123);
@@ -298,7 +302,8 @@ footer p {
     font-family: Roboto, sans-serif;
 }
 
-.btn-signup:hover, .btn-review:hover {
+.btn-signup:hover,
+.btn-review:hover {
     background-color: rgb(75, 106, 123);
     color: white;
     border-radius: 5px;
@@ -357,7 +362,8 @@ footer p {
     background-color: #d3d2d2;
 }
 
-.about-card-a, .about-card-b {
+.about-card-a,
+.about-card-b {
     max-width: 26rem;
     border-radius: 18px;
     border: 2px solid rgba(0, 0, 0, 0.425);
@@ -378,7 +384,8 @@ footer p {
     height: 700px;
 }
 
-.about-card-a img, .about-card-b img {
+.about-card-a img,
+.about-card-b img {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     height: 250px;
@@ -386,19 +393,23 @@ footer p {
     object-position: center top;
 }
 
-.about-card-a.card-body, .about-card-b.card-body {
+.about-card-a.card-body,
+.about-card-b.card-body {
     height: fit-content;
 }
 
-.about-card-a p, .about-card-a h5 {
+.about-card-a p,
+.about-card-a h5 {
     color: black;
 }
 
-.about-card-b p, .about-card-b h5 {
+.about-card-b p,
+.about-card-b h5 {
     color: black;
 }
 
-.about-card-a button, .about-card-b button {
+.about-card-a button,
+.about-card-b button {
     border: none;
     background-color: white;
     font-family: "Funnel Display", sans-serif;
@@ -414,8 +425,8 @@ footer p {
 .hero-gallery {
     position: relative;
     background-position: center 50%;
-    background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), 
-                url('../images/galleryhero.jpg') center/cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+        url('../images/galleryhero.jpg') center/cover no-repeat;
     background-repeat: no-repeat;
     background-size: cover;
     height: 50vh;
@@ -444,10 +455,39 @@ footer p {
     border-radius: 20px;
 }
 
+/* Delete Modal */
 
- /* Media Querys */
+.modal-content {
+    background-color: rgb(134, 204, 227);
+    border: 3px solid rgb(75, 106, 123);
+}
 
- @media (max-width: 420px) {
+.modal-header,
+.modal-footer {
+    border-color: rgb(134, 204, 227);
+}
+
+/* Review Edit */
+
+.form-container-edit {
+    border-radius: 10px;
+    color: white;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.current-image-edit img {
+    object-fit: contain;
+    width: 100%;
+    max-height: 300px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Media Querys */
+
+@media (max-width: 420px) {
     .gallery-page img {
         width: 350px;
         max-height: 300px;
@@ -456,31 +496,37 @@ footer p {
         padding: 5px 0px 5px 0px;
         border-radius: 20px;
     }
- }
+}
 
- @media (min-width: 768px) and (max-width: 1000px) {
+@media (min-width: 768px) and (max-width: 1000px) {
     .gallery-page img {
-      width: calc(100% - 10px); /* Adjust width based on available space */
-      max-width: 100%; /* Prevent overflow */
-      height: 200px; /* Optional: Limit max height */
-      object-fit: cover;
-      object-position: center;
-      border-radius: 20px;
+        width: calc(100% - 10px);
+        /* Adjust width based on available space */
+        max-width: 100%;
+        /* Prevent overflow */
+        height: 200px;
+        /* Optional: Limit max height */
+        object-fit: cover;
+        object-position: center;
+        border-radius: 20px;
     }
-  }
+}
 
-  @media (min-width: 1000px) {
+@media (min-width: 1000px) {
     .gallery-page img {
-      width: calc(100% - 10px); /* Adjust width based on available space */
-      max-width: 100%; /* Prevent overflow */
-      height: 300px; /* Optional: Limit max height */
-      object-fit: cover;
-      object-position: center;
-      border-radius: 20px;
+        width: calc(100% - 10px);
+        /* Adjust width based on available space */
+        max-width: 100%;
+        /* Prevent overflow */
+        height: 300px;
+        /* Optional: Limit max height */
+        object-fit: cover;
+        object-position: center;
+        border-radius: 20px;
     }
-  }
+}
 
- @media (max-width: 576px) {
+@media (max-width: 576px) {
     .reviews-header {
         text-align: center;
         justify-content: center;
@@ -501,27 +547,27 @@ footer p {
     .full-review-detail {
         max-height: 500px;
     }
-    
+
     .review-cards-detail {
         background-color: rgba(0, 0, 0, 0.5);
         border-top-left-radius: 0;
         border-top-right-radius: 0;
         width: 20rem;
-    
+
     }
-    
+
     .review-cards a {
         width: 100px;
         font-size: 14px;
     }
-    
+
     .review-image-detail {
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
         overflow: hidden;
         width: 20rem;
     }
-    
+
     .review-image-detail img {
         width: 20rem;
         height: 250px;

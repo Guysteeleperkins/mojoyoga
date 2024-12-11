@@ -22,11 +22,11 @@
                                 <div class="current-image-edit">
                                     <img src="{{ form.instance.image.url }}" alt="Current Review Image">
                                 </div>
+                                {% endif %}
                                 <div class="p-2">
                                     <label for="id_image">Upload an image (Optional):</label>
                                     <input type="file" name="image" id="id_image" class="form-control-file">
                                 </div>
-                                {% endif %}
                             </div>
                         </div>
                         <div class="p-2">

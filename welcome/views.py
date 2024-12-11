@@ -2,11 +2,13 @@ from django.shortcuts import render
 from django.views.generic import TemplateView
 # Create your views here.
 
+
 class WelcomePage(TemplateView):
     """
     Displays home page"
     """
     template_name = 'welcome/index.html'
+
 
 class AboutPage(TemplateView):
     """
@@ -14,8 +16,10 @@ class AboutPage(TemplateView):
     """
     template_name = 'welcome/about.html'
 
+
 class GalleryPage(TemplateView):
     """
     Displays about page"
     """
     template_name = 'welcome/gallery.html'
+    

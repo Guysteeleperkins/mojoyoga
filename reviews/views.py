@@ -7,6 +7,7 @@ from .models import Review
 from .forms import ReviewForm
 # Create your views here.
 
+
 class ReviewList(generic.ListView):
     model = Review
     template_name = 'reviews/reviews.html'
@@ -14,11 +15,12 @@ class ReviewList(generic.ListView):
     paginate_by = 12
 
     def get_queryset(self):
-        return Review.objects.all().order_by('-created_on') 
+        return Review.objects.all().order_by('-created_on')
+
 
 class LeaveReview(CreateView):
     model = Review
-    fields = ['rating', 'content', 'image',]
+    fields = ['rating', 'content', 'image', ]
     template_name = 'reviews/leave_a_review.html'
     success_url = reverse_lazy('reviews')
 
@@ -61,7 +63,11 @@ def review_edit(request, pk):
     else:
         form = ReviewForm(instance=review)
 
-    return render(request, 'reviews/review_edit.html', {'form': form, 'review':review,})
+    return render(
+        request,
+        'reviews/review_edit.html',
+        {'form': form, 'review': review, })
+
 
 def review_delete(request, pk):
     """
@@ -73,8 +79,9 @@ def review_delete(request, pk):
         review.delete()
         messages.add_message(request, messages.SUCCESS, 'Review deleted!')
     else:
-        messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
+        messages.add_message(
+            request,
+            messages.ERROR,
+            'You can only delete your own comments!')
 
     return redirect('reviews')
-
-

@@ -233,57 +233,320 @@ Cross-Site Request Forgery tokens are included in every form to help authenticat
 
 ## User View
 
-It is important for MojoYoga to accessible for un registered users, anyone must be able to see the content and see other peoples reviews to help the user decide on whether they would like to go on a retreat. Non-registered users would be prompted to create an account if they clicked on "leave a review" in the navbar and would only be able to leave one if signed in.
+It is important for MojoYoga to accessible for un registered users, anyone must be able to see the content and see other peoples reviews to help the user decide on whether they would like to go on a retreat. Non-registered users would be prompted to create an account if they clicked on "leave a review" in the navbar and would only be able to leave one if signed in. Only users who created a review can edit and delete their review.
+
+Users also recieve a message depenant on their action. Logging in, Signing up, creating a review, editing a review and deleting a review give a small message after using the features of the site. 
 
 ## CRUD Functionality
 
 Users are able to Create, Read, Update and Delete their shared information on MojoYoga. The reviews section is the only CRUD functionality on the website due to it being based on reviews.
 
+
 ## Feature Showcase
 
 <details open>
     <summary>Welcome Page</summary>  
-    <img src="documentation/final_views/nav.png">  
+    <img src="documentation/images/welcomepage.png" width="50%" height="50%">  
 </details>
 
 <details open>
     <summary>About Page</summary>  
-    <img src="documentation/final_views/nav.png">  
+    <img src="documentation/images/aboutpage.png" width="50%" height="50%">  
 </details>
 
 <details open>
     <summary>Gallery Page</summary>  
-    <img src="documentation/final_views/nav.png">  
+    <img src="documentation/images/gallerypage.png" width="50%" height="50%">  
 </details>
 
 <details open>
     <summary>Reviews Page</summary>  
-    <img src="documentation/final_views/nav.png">  
+    <img src="documentation/images/reviewspage.png" width="50%" height="50%">  
 </details>
 
 <details open>
     <summary>Leave a Review Page</summary>  
-    <img src="documentation/final_views/nav.png">  
+    <img src="documentation/images/leaveareview.png" width="50%" height="50%">  
+</details>
+
+<details open>
+    <summary>Leave a Review Page (Not logged in)</summary>  
+    <img src="documentation/images/leavereview-notloggedin.png" width="50%" height="50%">  
+</details>
+
+<details open>
+    <summary>Edit Review</summary>  
+    <img src="documentation/images/editreview.png" width="50%" height="50%">  
+</details>
+
+<details open>
+    <summary>Delete Modal</summary>  
+    <img src="documentation/images/modaldelete.png" width="50%" height="50%">  
 </details>
 
 <details open>
     <summary>Sign Up Page</summary>  
-    <img src="documentation/final_views/nav.png">  
+    <img src="documentation/images/registerpage.png" width="50%" height="50%">  
 </details>
 
 <details open>
     <summary>Login Page</summary>  
-    <img src="documentation/final_views/nav.png">  
+    <img src="documentation/images/signin.png" width="50%" height="50%">  
 </details>
 
 <details open>
     <summary>Log out Page</summary>  
-    <img src="documentation/final_views/nav.png">  
+    <img src="documentation/images/logout.png" width="50%" height="50%">  
 </details>
 
 ## Future Features
 
+Due to time constraints I could not impliment some of my "Could Haves" from my [Github Projects Board](https://github.com/Guysteeleperkins/mojoyoga/projects). 
+
+These include:
+  - Review Likes/Dislike
+  - Booking Page
+  - User Profile
+  - Review Comments
+  - Retreat booking integration
+  - Multilingual Support
+  - Search and filter Reviews
+
+These features I believe are within my capabilties to complete, therefore after my project has been reviewed and tested I will be impliementing these in my own time. I very much look forward to adding more custom models to test my knowledge and increase my experience.
+
+
 # Technologies & Languages Used 
+
+  - HTML
+  - CSS
+  - JavaScript
+  - Python
+  - [Git](https://git-scm.com/) used for version control.
+  - [Github](https://www.github.com) used for online storage of codebase and Projects tool.
+  - [Gitpod](https://www.gitpod.io/) as an online, cloud-based IDE for development.
+  - Balsamiq Wireframes - Wireframe creation.
+  - [Django](https://www.djangoproject.com/) was used as the Python framework for the site.
+  - [Cloudinary](https://cloudinary.com/) was used for cloud media storage of user uploaded images.
+  - PostgreSQL 
+  - [Heroku](https://www.heroku.com) was used to host the FreeFido application.
+
+# Libraries and Frameworks
+
+- Bootstrap v5.0.1
+- asgiref v3.8.1
+- cloudinary v1.41.0
+- dj-database-url v0.5.0
+- dj3-cloudinary-storage v0.0.6
+- Django v4.2.16
+- django-allauth v0.57.2
+- gunicorn v20.1.0
+- oauthlib v3.2.2
+- psycopg v3.2.3
+- PyJWT v2.10.0
+- python3-openid v3.2.0
+- requests-oauthlib v2.0.0
+- sqlparse v0.5.2
+- urllib3 v1.26.20
+- whitenoise v5.3.0
+
+## Tools and Programs
+
+ - [CodeInstitute](<https://learn.codeinstitute.net/dashboard>) - Using walkthrough projects and lessons
+ - [ChatGPT](<https://chatgpt.com/>) - To assist with learning and debugging
+ - [GitHub](<https://github.com/>) _ Project board and linking with Herko
+ - [Heroku](<https://dashboard.heroku.com/apps>) - Hosting this full-stack project
+ - Balsamiq Wireframes - App to create wireframes
+ - [Google](<https://www.google.com/>) - To assist with learning and debugging
+
+ 
+ # Testing
+
+ ## Validators
+
+ During the testing phase I had very few valiation errors, usually it was some trailing tags in the HTML and missing whitespace for Python.
+
+ ### Python
+
+ <details open>
+    <summary>Log out Page</summary>  
+    <img src="documentation/images/python1.png" width="50%" height="50%">  
+</details>
+
+<details open>
+    <summary>Log out Page</summary>  
+    <img src="documentation/images/python2.png" width="50%" height="50%">  
+</details>
+
+<details open>
+    <summary>Log out Page</summary>  
+    <img src="documentation/images/python3.png" width="50%" height="50%">  
+</details>
+
+<details open>
+    <summary>Log out Page</summary>  
+    <img src="documentation/images/python4.png" width="50%" height="50%">  
+</details>
+
+<details open>
+    <summary>Log out Page</summary>  
+    <img src="documentation/images/python5.png" width="50%" height="50%">  
+</details>
+
+<details open>
+    <summary>Log out Page</summary>  
+    <img src="documentation/images/python6.png" width="50%" height="50%">  
+</details>
+
+<details open>
+    <summary>Log out Page</summary>  
+    <img src="documentation/images/python7.png" width="50%" height="50%">  
+</details>
+
+### JavaScript
+
+<details open>
+    <summary>Log out Page</summary>  
+    <img src="documentation/images/js1.png]" width="50%" height="50%">  
+</details>
+
+<details open>
+    <summary>Log out Page</summary>  
+    <img src="documentation/images/js2.png" width="50%" height="50%">  
+</details>
+
+<details open>
+    <summary>Log out Page</summary>  
+    <img src="documentation/images/js3.png" width="50%" height="50%">  
+</details>
+
+### CSS
+
+<details open>
+    <summary>Log out Page</summary>  
+    <img src="documentation/images/css.png" width="50%" height="50%">  
+</details>
+
+
+ # Deployment
+
+ ## Connecting to GitHub  
+
+To begin this project from scratch, you must first create a new GitHub repository using the [Code Institute's Template](https://github.com/Code-Institute-Org/ci-full-template). This template provides the relevant tools to get you started. To use this template:
+
+1. Log in to [GitHub](https://github.com/) or create a new account.
+2. Navigate to the above CI Full Template.
+3. Click '**Use this template**' -> '**Create a new repository**'.
+4. Choose a new repository name and click '**Create repository from template**'.
+5. In your new repository space, click the purple CodeAnywhere (if this is your IDE of choice) button to generate a new workspace.
+
+## Django Project Setup
+
+1. Install Django and supporting libraries: 
+   
+- ```pip3 install 'django<4' gunicorn```
+- ```pip3 install dj_database_url psycopg2```
+- ```pip3 install dj3-cloudinary-storage```  
+  
+2. Once you have installed any relevant dependencies or libraries, such as the ones listed above, it is important to create a **requirements.txt** file and add all installed libraries to it with the ```pip3 freeze --local > requirements.txt``` command in the terminal.  
+3. Create a new Django project in the terminal ```django-admin startproject freefido .```
+4. Create a new app eg. ```python3 mangage.py startapp booking```
+5. Add this to list of **INSTALLED_APPS** in **settings.py** - 'booking',
+6. Create a superuser for the project to allow Admin access and enter credentials: ```python3 manage.py createsuperuser```
+7. Migrate the changes with commands: ```python3 manage.py migrate```
+8. An **env.py** file must be created to store all protected data such as the **DATABASE_URL** and **SECRET_KEY**. These may be called upon in your project's **settings.py** file along with your Database configurations. The **env.py** file must be added to your **gitignore** file so that your important, protected information is not pushed to public viewing on GitHub. For adding to **env.py**:
+
+- ```import os```
+- ```os.environ["DATABASE_URL"]="<copiedURLfromElephantSQL>"```
+- ```os.environ["SECRET_KEY"]="my_super^secret@key"```
+  
+For adding to **settings.py**:
+
+- ```import os```
+- ```import dj_database_url```
+- ```if os.path.exists("env.py"):```
+- ```import env```
+- ```SECRET_KEY = os.environ.get('SECRET_KEY')``` (actual key hidden within env.py)  
+
+9. Replace **DATABASES** with:
+
+```
+DATABASES = {
+    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+  }
+```
+
+10. Set up the templates directory in **settings.py**:
+- Under ``BASE_DIR`` enter ``TEMPLATES_DIR = os.path.join(BASE_DIR, ‘templates’)``
+- Update ``TEMPLATES = 'DIRS': [TEMPLATES_DIR]`` with:
+
+```
+os.path.join(BASE_DIR, 'templates'),
+os.path.join(BASE_DIR, 'templates', 'allauth')
+```
+
+- Create the media, static and templates directories in top level of project file in IDE workspace.
+
+11. A **Procfile** must be created within the project repo for Heroku deployment with the following placed within it: ```web: gunicorn freefido.wsgi```
+12. Make the necessary migrations again.
+
+## Cloudinary API 
+
+Cloudinary provides a cloud hosting solution for media storage. All users uploaded images in the FreeFid project are hosted here.
+
+Set up a new account at [Cloudinary](https://cloudinary.com/) and add your Cloudinary API environment variable to your **env.py** and Heroku Config Vars.
+In your project workspace: 
+
+- Add Cloudinary libraries to INSTALLED_APPS in settings.py 
+- In the order: 
+```
+   'cloudinary_storage',  
+   'django.contrib.staticfiles',  
+   'cloudinary',
+```
+- Add to **env.py** and link up with **settings.py**: ```os.environ["CLOUDINARY_URL"]="cloudinary://...."``` 
+- Set Cloudinary as storage for media and static files in settings.py:
+- ```STATIC_URL = '/static/'```
+```
+  STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'  
+  STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]  
+  STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')‌  
+  MEDIA_URL = '/media/'  
+  DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+```
+
+## Elephant SQL
+
+A new database instance can be created on [Elephant SQL](https://www.elephantsql.com/) for your project. 
+
+- Choose a name and select the **Tiny Turtle** plan, which is free.
+- Select your Region and the nearest Data Center to you. 
+- From your user dashboard, retrieve the important 'postgres://....' value. Place the value within your **DATABASE_URL**  in your **env.py** file and follow the below instructions to place it in your Heroku Config Vars.
+
+
+## Heroku deployment
+
+To start the deployment process , please follow the below steps:
+
+1. Log in to [Heroku](https://id.heroku.com/login) or create an account if you are a new user.
+2. Once logged in, in the Heroku Dashboard, navigate to the '**New**' button in the top, right corner, and select '**Create New App**'.
+3. Enter an app name and choose your region. Click '**Create App**'. 
+4. In the Deploy tab, click on the '**Settings**', reach the '**Config Vars**' section and click on '**Reveal Config Vars**'. Here you will enter KEY:VALUE pairs for the app to run successfully. The KEY:VALUE pairs that you will need are your: 
+   
+   - **CLOUDINARY_URL**: **cloudinary://....** 
+   - **DATABASE_URL**:**postgres://...** 
+   - **DISABLE_COLLECTSTATIC** of value '1' (N.B Remove this Config Var before deployment),
+   -  **PORT**:**8000**
+   -  **SECRET_KEY** and value  
+  
+5. Add the Heroku host name into **ALLOWED_HOSTS** in your projects **settings.py file** -> ```['herokuappname', ‘localhost’, ‘8000 port url’].```
+6. Once you are sure that you have set up the required files including your requirements.txt and Procfile, you have ensured that **DEBUG=False**, save your project, add the files, commit for initial deployment and push the data to GitHub.
+7. Go to the '**Deploy**' tab and choose GitHub as the Deployment method.
+8. Search for the repository name, select the branch that you would like to build from, and connect it via the '**Connect**' button.
+9.  Choose from '**Automatic**' or '**Manual**' deployment options, I chose the 'Manual' deployment method. Click '**Deploy Branch**'.
+10. Once the waiting period for the app to build has finished, click the '**View**' link to bring you to your newly deployed site. If you receive any errors, Heroku will display a reason in the app build log for you to investigate. **DISABLE_COLLECTSTATIC**  may be removed from the Config Vars once you have saved and pushed an image within your project, as can **PORT:8000**.
+
+
+
 
 
 

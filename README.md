@@ -208,7 +208,7 @@ The wireframes for MojoYoga were used using Balsamiq Wireframes, this allowed me
 
 **AllAuth**  
 
-Django AllAuth is an installable framework that takes care of the user registration and authentication process. Authentication was needed to determine when a user was registered or unregistered and it controlled what content was accessible on FreeFido. The setup of AllAuth included:
+Django AllAuth is an installable framework that takes care of the user registration and authentication process. Authentication was needed to determine when a user was registered or unregistered and it controlled what content was accessible on MojoYoga. The setup of AllAuth included:
 
 - installing it to my workspace dependencies
 - adding it to my INSTALLED_APPS in my settings.py
@@ -318,7 +318,7 @@ These features I believe are within my capabilties to complete, therefore after 
   - [Django](https://www.djangoproject.com/) was used as the Python framework for the site.
   - [Cloudinary](https://cloudinary.com/) was used for cloud media storage of user uploaded images.
   - PostgreSQL 
-  - [Heroku](https://www.heroku.com) was used to host the FreeFido application.
+  - [Heroku](https://www.heroku.com) was used to host the MojoYoga application.
 
 # Libraries and Frameworks
 
@@ -533,7 +533,7 @@ os.path.join(BASE_DIR, 'templates', 'allauth')
 
 ## Cloudinary API 
 
-Cloudinary provides a cloud hosting solution for media storage. All users uploaded images in the FreeFid project are hosted here.
+Cloudinary provides a cloud hosting solution for media storage. All users uploaded images in the MojoYoga project are hosted here.
 
 Set up a new account at [Cloudinary](https://cloudinary.com/) and add your Cloudinary API environment variable to your **env.py** and Heroku Config Vars.
 In your project workspace: 

@@ -3,32 +3,43 @@
 {% block content %}
 <!-- reviews.html starts here -->
 <div class="hero-review d-flex flex-column">
-  <div class="messages">
-    <div class="container-fluid">
-      <div class="row login-status">
-        <div class="col-6">
-          {% if user.is_authenticated %}
-          <p class="d-flex align-items-center m-1">Leave a <a
-              class="nav-link {% if request.path == '/leave-a-review/' %}active{% endif %}" aria-current="page"
-              href="{% url 'leave_review' %}">review</a></p>
-          {% else %}
-          <p class="d-flex align-items-center m-1"><a
-              class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page"
-              href="{% url 'account_login' %}">Log in</a> to leave a review</p>
-          {% endif %}
-        </div>
-        <div class="col-6 d-flex justify-content-end">
-          {% if user.is_authenticated %}
-          <p class="d-flex align-items-center m-1">You are logged in as {{ user }}</p>
-          {% else %}
-          <p class="d-flex align-items-center m-1">You are not logged in</p>
-          {% endif %}
-        </div>
+  <div class="container-fluid">
+    <div class="row login-status">
+      <div class="col-6">
+        {% if user.is_authenticated %}
+        <p class="d-flex align-items-center m-1">Leave a <a
+            class="nav-link {% if request.path == '/leave-a-review/' %}active{% endif %}" aria-current="page"
+            href="{% url 'leave_review' %}">review</a></p>
+        {% else %}
+        <p class="d-flex align-items-center m-1"><a class="nav-link {% if request.path == login_url %}active{% endif %}"
+            aria-current="page" href="{% url 'account_login' %}">Log in</a> to leave a review</p>
+        {% endif %}
+      </div>
+      <div class="col-6 d-flex justify-content-end">
+        {% if user.is_authenticated %}
+        <p class="d-flex align-items-center m-1">You are logged in as {{ user }}</p>
+        {% else %}
+        <p class="d-flex align-items-center m-1">You are not logged in</p>
+        {% endif %}
       </div>
     </div>
   </div>
   <div class="reviews-header">
     <h1>Reviews</h1>
+  </div>
+  <!-- Display messages here -->
+  <div class="update-message d-flex">
+    {% if messages %}
+    <div class="row">
+      <div class="col-12">
+        <ul class="messages">
+          {% for message in messages %}
+          <li class="alert {{ message.tags }}">{{ message }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    {% endif %}
   </div>
   <div class="container-fluid">
     <div class="row">

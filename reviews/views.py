@@ -26,6 +26,7 @@ class LeaveReview(CreateView):
 
     def form_valid(self, form):
         form.instance.author = self.request.user
+        messages.success(self.request, "Review submitted successfully!")
         return super().form_valid(form)
 
 

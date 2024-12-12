@@ -1,5 +1,8 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
+from django.contrib import messages
+from allauth.account.signals import user_logged_in, user_logged_out
+from django.dispatch import receiver
 # Create your views here.
 
 
@@ -22,4 +25,3 @@ class GalleryPage(TemplateView):
     Displays about page"
     """
     template_name = 'welcome/gallery.html'
-    

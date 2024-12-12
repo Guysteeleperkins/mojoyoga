@@ -10,6 +10,15 @@
         <p class="m-3">You are not logged in</p>
         {% endif %}
     </div>
+    {% if messages %}
+    <div class="update-message">
+        <ul class="messages">
+            {% for message in messages %}
+            <li class="alert {{ message.tags }}">{{ message }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
     <div class="row">
         <div class="col hero-text">
             <h1>Mojo Yoga Morocco</h1>

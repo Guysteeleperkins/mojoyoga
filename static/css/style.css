@@ -494,6 +494,10 @@ footer p {
     z-index: 10;
 }
 
+.messages {
+    list-style-type: none !important;
+}
+
 /* Media Querys */
 
 @media (max-width: 420px) {

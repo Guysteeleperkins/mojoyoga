@@ -32,11 +32,9 @@
     {% if messages %}
     <div class="row">
       <div class="col-12">
-        <ul class="messages">
           {% for message in messages %}
-          <li class="alert {{ message.tags }}">{{ message }}</li>
+          <p class="alert {{ message.tags }}">{{ message }}</p>
           {% endfor %}
-        </ul>
       </div>
     </div>
     {% endif %}

@@ -27,17 +27,10 @@ Live site: [MojoYoga](https://mojoyoga-f4267f7b0b57.herokuapp.com/)
     - [MoSCoW Prioritization](#moscow-prioritization)
     - [Sprints](#sprints)
   - [User Stories](#user-stories)
-    - [Visitor User Stories](#visitor-user-stories)
-    - [Epic - User Profile](#epic---user-profile)
-    - [Epic - Articles](#epic---articles)
-    - [Epic - Booking](#epic---booking)
-    - [Epic - Photo Gallery](#epic---photo-gallery)
-    - [Epic - Visit Us/Reviews](#epic---visit-usreviews)
   - [Scope Plane](#scope-plane)
   - [Structural Plane](#structural-plane)
   - [Skeleton \& Surface Planes](#skeleton--surface-planes)
     - [Wireframes](#wireframes)
-    - [Database Schema - Entity Relationship Diagram](#database-schema---entity-relationship-diagram)
     - [Security](#security)
 - [Features](#features)
   - [User View - Registered/Unregistered](#user-view---registeredunregistered)
@@ -54,12 +47,9 @@ Live site: [MojoYoga](https://mojoyoga-f4267f7b0b57.herokuapp.com/)
   - [Cloudinary API](#cloudinary-api)
   - [Elephant SQL](#elephant-sql)
   - [Heroku deployment](#heroku-deployment)
-  - [Clone project](#clone-project)
-  - [Fork Project](#fork-project)
 - [Credits](#credits)
   - [Code](#code)
   - [Media](#media)
-    - [Additional reading/tutorials/books/blogs](#additional-readingtutorialsbooksblogs)
   - [Acknowledgements](#acknowledgements)
 
 ## Overview
@@ -77,7 +67,7 @@ Mojo Yoga has full responsiveness on different screen sizes and is accessible on
 
 # UX - User Experience
 
-## Desgin Inspiration
+## Design Inspiration
 
 I was always excited to work on a full stack project from the moment I enrolled in the course, throughout the course my idea for the Capstone project changed many times. I initally wanted to create a JavaScript game with leadersboards and profiles, however as each project went by I realised that creating a functional MVP should always come first and due to time restraints it may put too much pressure on myself. Having gone through the walkthrough project in the course in which I made a blog site it gave me the inspiration of creating a new element to my mothers website - A page dedicated to reviews and somewhere to sign up and make an account. Whilst adding my own touch and having permission to use this site as a base I knew this would be perfect to practice my HTML, CSS and JS skills whilst adding CRUD functionality to create a full stack app and take some pressure off with finding a other sites for inspiration.
 
@@ -361,68 +351,120 @@ These features I believe are within my capabilties to complete, therefore after 
  
  # Testing
 
+ ## Manual Testing
+
+ Throughout the project I was constantly testing CRUD functionality by using an account I had created myself to check if everything worked. This helped extremely well to debug when things did not work as expected. Below is screenshots following a test run.
+
+<details open>
+    <summary>Sign Up</summary>  
+    <img src="documentation/images/testsignup.png" width="50%" height="50%">  
+</details>
+
+<details open>
+    <summary>Sign Up Message</summary>  
+    <img src="documentation/images/testsignupmessage.png" width="50%" height="50%">  
+</details>
+
+<details open>
+    <summary>Leave a Review</summary>  
+    <img src="documentation/images/testleavereview.png" width="50%" height="50%">  
+</details>
+
+<details open>
+    <summary>Review Detail</summary>  
+    <img src="documentation/images/testreview.png" width="50%" height="50%">  
+</details>
+
+<details open>
+    <summary>Review Edit</summary>  
+    <img src="documentation/images/testedit.png" width="50%" height="50%">  
+</details>
+
+<details open>
+    <summary>Review Edit</summary>  
+    <img src="documentation/images/testedit2.png" width="50%" height="50%">  
+</details>
+
+<details open>
+    <summary>Review Edited</summary>  
+    <img src="documentation/images/reviewedited.png" width="50%" height="50%">  
+</details>
+
+<details open>
+    <summary>Delete Review</summary>  
+    <img src="documentation/images/testdelete.png" width="50%" height="50%">  
+</details>
+
+<details open>
+    <summary>Review Deleted</summary>  
+    <img src="documentation/images/testdelete2.png" width="50%" height="50%">  
+</details>
+
+<details open>
+    <summary>Log out Page</summary>  
+    <img src="documentation/images/testlogout.png" width="50%" height="50%">  
+</details>
+
+
  ## Validators
 
  During the testing phase I had very few valiation errors, usually it was some trailing tags in the HTML and missing whitespace for Python.
 
+ ### HTML
+
+ Every Page was checked with [ValidatorW3](<https://validator.w3.org/>) and returend no errors found. The screenshot below shows what all pages showed
+
+  <details open>
+    <img src="documentation/images/HTML.png" width="50%" height="50%">  
+  </details>
+
  ### Python
 
  <details open>
-    <summary>Log out Page</summary>  
     <img src="documentation/images/python1.png" width="50%" height="50%">  
 </details>
 
 <details open>
-    <summary>Log out Page</summary>  
     <img src="documentation/images/python2.png" width="50%" height="50%">  
 </details>
 
 <details open>
-    <summary>Log out Page</summary>  
     <img src="documentation/images/python3.png" width="50%" height="50%">  
 </details>
 
 <details open>
-    <summary>Log out Page</summary>  
     <img src="documentation/images/python4.png" width="50%" height="50%">  
 </details>
 
 <details open>
-    <summary>Log out Page</summary>  
     <img src="documentation/images/python5.png" width="50%" height="50%">  
 </details>
 
 <details open>
-    <summary>Log out Page</summary>  
     <img src="documentation/images/python6.png" width="50%" height="50%">  
 </details>
 
-<details open>
-    <summary>Log out Page</summary>  
+<details open> 
     <img src="documentation/images/python7.png" width="50%" height="50%">  
 </details>
 
 ### JavaScript
 
-<details open>
-    <summary>Log out Page</summary>  
+<details open> 
     <img src="documentation/images/js1.png]" width="50%" height="50%">  
 </details>
 
 <details open>
-    <summary>Log out Page</summary>  
     <img src="documentation/images/js2.png" width="50%" height="50%">  
 </details>
 
 <details open>
-    <summary>Log out Page</summary>  
     <img src="documentation/images/js3.png" width="50%" height="50%">  
 </details>
 
 ### CSS
 
-<details open>
-    <summary>Log out Page</summary>  
+<details open> 
     <img src="documentation/images/css.png" width="50%" height="50%">  
 </details>
 
@@ -448,7 +490,7 @@ To begin this project from scratch, you must first create a new GitHub repositor
 - ```pip3 install dj3-cloudinary-storage```  
   
 2. Once you have installed any relevant dependencies or libraries, such as the ones listed above, it is important to create a **requirements.txt** file and add all installed libraries to it with the ```pip3 freeze --local > requirements.txt``` command in the terminal.  
-3. Create a new Django project in the terminal ```django-admin startproject freefido .```
+3. Create a new Django project in the terminal ```django-admin startproject mojo_yoga .```
 4. Create a new app eg. ```python3 mangage.py startapp booking```
 5. Add this to list of **INSTALLED_APPS** in **settings.py** - 'booking',
 6. Create a superuser for the project to allow Admin access and enter credentials: ```python3 manage.py createsuperuser```
@@ -456,7 +498,7 @@ To begin this project from scratch, you must first create a new GitHub repositor
 8. An **env.py** file must be created to store all protected data such as the **DATABASE_URL** and **SECRET_KEY**. These may be called upon in your project's **settings.py** file along with your Database configurations. The **env.py** file must be added to your **gitignore** file so that your important, protected information is not pushed to public viewing on GitHub. For adding to **env.py**:
 
 - ```import os```
-- ```os.environ["DATABASE_URL"]="<copiedURLfromElephantSQL>"```
+- ```os.environ["DATABASE_URL"]="<copied URL from https://dbs.ci-dbs.net/>"```
 - ```os.environ["SECRET_KEY"]="my_super^secret@key"```
   
 For adding to **settings.py**:
@@ -486,7 +528,7 @@ os.path.join(BASE_DIR, 'templates', 'allauth')
 
 - Create the media, static and templates directories in top level of project file in IDE workspace.
 
-11. A **Procfile** must be created within the project repo for Heroku deployment with the following placed within it: ```web: gunicorn freefido.wsgi```
+11. A **Procfile** must be created within the project repo for Heroku deployment with the following placed within it: ```web: gunicorn mojo_yoga.wsgi```
 12. Make the necessary migrations again.
 
 ## Cloudinary API 
@@ -514,9 +556,11 @@ In your project workspace:
   DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 ```
 
-## Elephant SQL
+## PostgreSQL
 
-A new database instance can be created on [Elephant SQL](https://www.elephantsql.com/) for your project. 
+A new database instance can be created on [PostgreSQL from Code Instiute](https://dbs.ci-dbs.net/) for your project. However this can only be used as a student with Code Institute. 
+
+Other option: [Elephant SQL](https://www.elephantsql.com/)
 
 - Choose a name and select the **Tiny Turtle** plan, which is free.
 - Select your Region and the nearest Data Center to you. 
@@ -545,6 +589,34 @@ To start the deployment process , please follow the below steps:
 9.  Choose from '**Automatic**' or '**Manual**' deployment options, I chose the 'Manual' deployment method. Click '**Deploy Branch**'.
 10. Once the waiting period for the app to build has finished, click the '**View**' link to bring you to your newly deployed site. If you receive any errors, Heroku will display a reason in the app build log for you to investigate. **DISABLE_COLLECTSTATIC**  may be removed from the Config Vars once you have saved and pushed an image within your project, as can **PORT:8000**.
 
+
+# Credits
+
+## Code
+
+The following complemented my learning for this project.
+
+ - [Code Institute's](https://codeinstitute.net/ie/) Learning Content.
+ - [Django Docs](https://www.djangoproject.com/)
+ - [Bootstrap Docs](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
+ - [Code Institute's](https://github.com/Code-Institute-Org>) Blog walkthrough
+
+### README
+
+ - [Github](<https://github.com/amylour/FreeFido_v2/blob/main/README.md?plain=1>) - Amy Lour's FreeFido Project README was used as a basis for this README
+
+## Media
+
+All the media used in this website was sourced from my Mum (Joanna Steele-Perkins) which was also used on her website which this was based off
+[MojoYogaMorocco](<https://www.mojoyogamorocco.com/>)
+
+
+## Acknowledgements
+
+  - Huge thankyou to my Mum who gave me the permission to base my project off her website and use photos she has taken over the years
+  - Many thanks to all my friends who helped during testing and pointed out any bugs
+  - Thank you to my mentor Alex and everyone in my cohort at CodeInstitute for always being helpful and supportive
+  - Thanks to my housemates for providing me with coffee and snacks throughout the most stressfull times of the course
 
 
 

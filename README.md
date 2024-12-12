@@ -197,15 +197,89 @@ Reviews / Review Details / Forms - Also inspired from another project that was s
 
 ### Wireframes
 
-### ERD (Entity Relationship Diagram)
+The wireframes for MojoYoga were used using Balsamiq Wireframes, this allowed me to get onto "paper" a quick and easy template on what I wanted the website to look like. I kept these very basic as the main priority was CRUD functionaility, however they kept a good base for me to work towards. I designed what a mobile, tablet and desktop would look like with my Welcome Page, Form Page (where log in, register etc would all keep the same look), and a Reviews page and how these would change with screen size.
+
+<details open>
+    <summary>Mobile Wireframe</summary>  
+    <img src="documentation/images/mobilewf.png">  
+</details>
+
+<details open>
+    <summary>Tablet Wireframe</summary>  
+    <img src="documentation/images/tabletwr.png">  
+</details>
+
+<details open>
+    <summary>Desktop Wireframe</summary>  
+    <img src="documentation/images/desktopwr.png">  
+</details>
 
 ### Security 
+
+**AllAuth**  
+
+Django AllAuth is an installable framework that takes care of the user registration and authentication process. Authentication was needed to determine when a user was registered or unregistered and it controlled what content was accessible on FreeFido. The setup of AllAuth included:
+
+- installing it to my workspace dependencies
+- adding it to my INSTALLED_APPS in my settings.py
+- sourcing the AUTHENTICATION_BACKENDS from the AllAuth docs for my settings.py
+- adding its URL to my projects 'urls.py'
+- run database migrations to create the tables needed for AllAuth
+
+**CSRF Tokens**
+Cross-Site Request Forgery tokens are included in every form to help authenticate the request with the server when the form is submitted. Without CSRF the site can be vunerable to attackers manipulation and theft of users data.
 
 # Features
 
 ## User View
 
+It is important for MojoYoga to accessible for un registered users, anyone must be able to see the content and see other peoples reviews to help the user decide on whether they would like to go on a retreat. Non-registered users would be prompted to create an account if they clicked on "leave a review" in the navbar and would only be able to leave one if signed in.
+
 ## CRUD Functionality
+
+Users are able to Create, Read, Update and Delete their shared information on MojoYoga. The reviews section is the only CRUD functionality on the website due to it being based on reviews.
+
+## Feature Showcase
+
+<details open>
+    <summary>Welcome Page</summary>  
+    <img src="documentation/final_views/nav.png">  
+</details>
+
+<details open>
+    <summary>About Page</summary>  
+    <img src="documentation/final_views/nav.png">  
+</details>
+
+<details open>
+    <summary>Gallery Page</summary>  
+    <img src="documentation/final_views/nav.png">  
+</details>
+
+<details open>
+    <summary>Reviews Page</summary>  
+    <img src="documentation/final_views/nav.png">  
+</details>
+
+<details open>
+    <summary>Leave a Review Page</summary>  
+    <img src="documentation/final_views/nav.png">  
+</details>
+
+<details open>
+    <summary>Sign Up Page</summary>  
+    <img src="documentation/final_views/nav.png">  
+</details>
+
+<details open>
+    <summary>Login Page</summary>  
+    <img src="documentation/final_views/nav.png">  
+</details>
+
+<details open>
+    <summary>Log out Page</summary>  
+    <img src="documentation/final_views/nav.png">  
+</details>
 
 ## Future Features
 

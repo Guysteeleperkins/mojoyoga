@@ -13,7 +13,8 @@
             <div class="col-12 col-sm-8 col-md-8 col-lg-6 col-xl-4 form-container-edit">
 
                 {% if user.is_authenticated %}
-                <form method="post" enctype="multipart/form-data" class="review-form review-form-edit" action="{% url 'review_detail' review.pk %}">
+                <form method="post" enctype="multipart/form-data" class="review-form review-form-edit"
+                    action="{% url 'review_edit' review.pk %}">
                     {% csrf_token %}
                     <div class="container-fluid p-0">
                         <div class="row">
@@ -46,7 +47,8 @@
                                     <button type="submit" class="btn btn-primary">Save Changes</button>
                                 </div>
                                 <div class="col-6 text-center">
-                                    <button type="button" class="btn btn-danger btn-delete" review_id="{{ review.pk }}">Delete
+                                    <button type="button" class="btn btn-danger btn-delete"
+                                        review_id="{{ review.pk }}">Delete
                                         Review</button>
                                 </div>
                             </div>

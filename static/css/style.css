@@ -485,6 +485,15 @@ footer p {
     border-top-right-radius: 10px;
 }
 
+/* Messages */
+
+.update-message {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+}
+
 /* Media Querys */
 
 @media (max-width: 420px) {
